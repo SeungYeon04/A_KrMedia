@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>프로젝트 상세</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/videoView.css">
+  <link rel="stylesheet" href="./css/all_header.css">
+</head>
+<body>
+  <script>
+    // 공통 header 삽입
+    fetch("module/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-md").innerHTML = data;
+      });
+  </script>
+  <div id="header-md"></div>
+  <div class="project-visual-section">
+    <img class="project-main-img" src="" alt="프로젝트 대표 이미지">
+  </div>
+
+  <div class="project-info-section">
+    <h1 class="project-title"></h1>
+    <p class="project-client"></p>
+    <p class="project-description"></p>
+  </div>
+
+  <div class="project-section-image">
+    <div class="blur-background"></div>
+    <img src="" alt="RocknRoll Poster">
+  </div>
+
+  <div class="project-section-description">
+    <p class="project-section-text">
+    </p>
+  </div>
+<footer class="project-footer">
+  <div class="footer-divider"></div>
+  <div class="project-footer-author">
+    <img class="footer-author-img" src="" alt="">
+    <p class="footer-author-name"></p>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-icons">
+    <span class="footer-icon">&lt;</span>
+    <span class="footer-icon">≡</span>
+    <span class="footer-icon">&gt;</span>
+  </div>
+  <div class="footer-copyright">
+    © 2023. DESIGNTHEHAM Co. all rights reserved.
+  </div>
+</footer>
+<script>
+function goTo(page) {
+  const year = sessionStorage.getItem("selectedYear");
+    if (!year) {
+        alert("먼저 연도를 선택해주세요!");
+        return;
+    }
+    window.location.href = page;
+    }
+</script>
+</body>
+</html>

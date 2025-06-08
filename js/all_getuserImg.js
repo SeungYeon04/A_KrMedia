@@ -6,9 +6,8 @@ export const  getImgUrl = (name) => {
 export const getUserAssetUrl = (name, type, filename) => {
   const base = "https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/";
 
-  const tryTypes = type === "PosterSorce"
-    ? ["PosterSorce", "PosterSorce01", "PosterSorce02"]
-    : [type];
+  const tryTypes = ["PosterSorce", "PosterSorce01", "PosterSorce02", "VideoSorce", "VideoSorce1", "VideoSorce2"]
+    .filter(folder => folder.startsWith(type)); // matches the base type (PosterSorce or VideoSorce)
 
   const urls = tryTypes.map(folder => {
     const fullPath = `2023/UsersWorkData/${name}/${folder}/${filename}`;
@@ -16,4 +15,10 @@ export const getUserAssetUrl = (name, type, filename) => {
   });
 
   return urls; // return list of possible URLs
+};
+
+export const getUserAssetPostUrl = (name, relativePath) => {
+  const base = "https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/";
+  const fullPath = `2023/UsersWorkData/${name}/${relativePath}`;
+  return `${base}${encodeURIComponent(fullPath)}?alt=media`;
 };

@@ -1,0 +1,242 @@
+.project-section-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.project-section-description {
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.project-section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.project-section-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 40px;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.project-author-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-author-card img {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-author-name {
+  font-size:2.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Pretendard', 'Nanum Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.project-header {
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+.project-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+.project-meta {
+  color: #aaa;
+  font-size: 1.1rem;
+  letter-spacing: 0.2px;
+}
+@media (max-width: 900px) {
+  .project-visual-full {
+    aspect-ratio: 16 / 9;
+    max-width: 100vw;
+    margin: 40px auto 30px auto;
+  }
+  .project-visual-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 600px) {
+  .project-header {
+    margin-top: 24px;
+    margin-bottom: 18px;
+  }
+  .project-title {
+    font-size: 1.3rem;
+  }
+  .project-visual-full {
+    max-width: 100vw;
+    margin: 20px auto 16px auto;
+  }
+  .project-visual-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .project-desc-section {
+    padding: 32px 0 32px 0;
+  }
+}
+/* Tile Layout Styles */
+.tile-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Tile Item (Poster) */
+.tile-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tile-item:hover {
+  transform: scale(1.02);
+}
+
+.tile-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
+}
+
+.tile-item h3 {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .tile-item img {
+    height: 180px;
+  }
+  .tile-item h3 {
+    font-size: 1rem;
+  }
+}
+
+.project-visual-section {
+  width: 100%;
+  margin: 60px auto 40px auto;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.project-main-img {
+top: 30%;
+width: 100%;
+height: 360px;
+object-fit: cover;
+}
+
+.project-info-section {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.project-client {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.7;
+}
+.project-footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.footer-divider {
+  border-top: 1px solid #666;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.project-footer-author {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 20px;
+}
+
+.footer-author-img {
+  width: 20rem;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.footer-author-name {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30rem;
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.footer-icon {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .footer-author-name {
+    font-size: 1.3rem;
+  }
+  .footer-icons {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
