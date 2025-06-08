@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/videoView.css">
   <link rel="stylesheet" href="./css/all_header.css">
+  <style>
+    .project-section-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
   <script>
@@ -24,17 +31,22 @@
   <div class="project-info-section">
     <h1 class="project-title"></h1>
     <p class="project-client"></p>
+    <hr>
     <p class="project-description"></p>
+    <hr>
   </div>
 
   <div class="project-section-image">
     <div class="blur-background"></div>
-    <img src="" alt="RocknRoll Poster">
   </div>
 
   <div class="project-section-description">
     <p class="project-section-text">
     </p>
+  </div>
+  <div class="project-StillCut">
+    <h1>Still Cut</h1>
+    <div class="project-section-stillcut"></div>
   </div>
 <footer class="project-footer">
   <div class="footer-divider"></div>
@@ -62,5 +74,6 @@ function goTo(page) {
     window.location.href = page;
     }
 </script>
+<script type="module" src="./js/viedo.js"></script>
 </body>
 </html>

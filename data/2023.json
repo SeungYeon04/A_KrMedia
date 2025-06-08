@@ -17,7 +17,7 @@
       "profileEmail": "rlaalswn3378@naver.com",
       "profileDream": "Creative Director",
       "videoFile": "01.png",
-      "vidioName": "멸종 위기종",
+      "vidioName": "한국은행",
       "teamWork": "암리방범대",
       "teamWorkEng": "암리방범대",
       "teamProjectThum": "09.jpg"
@@ -963,11 +963,17 @@
   "비디오": [
     {
       "id": "1001",
-      "designerName": "곽희진",
+      "vedioThumb" : "01.png",
+      "designerName":
+      [
+        "곽희진"
+      ],
       "postName": "LocknRoll",
       "client": "LocknLock",
       "clientDescription": "밀폐용기의 대명사.<br/>사람 중심 생활 혁신 브랜드 ‘LocknLock’입니다.",
       "videoDescription": "RocknRoll! 머리까지 울리는 시끄러운 락 밴드의 소리까지 완전 밀폐해버리는 강력한 밀폐용기의 특성을 재미있게 살려 표현했습니다.<br/>콜라주 기법을 활용하여 물체의 시끄러운 특성을 극대화했습니다. 언어유희를 사용하여 메인 카피에 재미와 의미를 더했습니다.",
+      "vimeoId": "835141712",
+      "thumbnail": "https://vumbnail.com/835141712.jpg",
       "stillCuts": [
         {
           "img": "04.jpg",
@@ -994,7 +1000,7 @@
           "desc": "6. 밴드의 시끄러운 소리까지 밀폐했습니다."
         },
         {
-          "img": "010.jpg",
+          "img": "10.jpg",
           "desc": "7. 소리까지 밀폐하는 락앤락"
         },
         {
@@ -1005,23 +1011,62 @@
           "img": "02.jpg",
           "desc": "8. RocknRoll, LocknRoll, LocknLock!"
         }
+      ],
+      "storyBoard" : [
+
       ]
     },
     {
       "id": "1002",
-      "designerName": "김민주",
-      "postName": "내 안에 몬스터 본능",
-      "client": "Monster Beverage Corp.",
-      "clientDescription": "몬스터 에너지는 글로벌 음료 기업으로, 다양한 에너지 음료 제품을 선보이며 청춘과 스포츠문화를 대표하는 브랜드입니다. ",
-      "subDescription": "에너지 드링크는 운동이나 피곤할 때 마시는 음료로, 나 자신을 활동적으로 만들어 줍니다.<br/>누구나 숨겨진 에너지 본능이 있다는 것을 보여주기 위해 샌드백을 통해 본능에 대한 자국을 묘사했습니다. "
+      "vedioThumb" : "01.jpg",
+      "vimeoId" : "835091131",
+      "designerName": [
+        "김은서"
+      ],
+      "postName": "굳은 의지와 명예",
+      "client": "COOKIE RUN : KINGDOM​​",
+      "clientDescription": "대한민국과 다양한 국가들에게 인기를 끌었던<br/>쿠키런의 스핀오프 소셜 RPG 게임입니다.",
+      "videoDescription":"",
+       "stillCuts": [
+        {
+          "img":["02.jpg","03.jpg","04.jpg","05.jpg","06.jpg"],
+          "desc":"<br/>쿠키런 킹덤의 에피소드를 타이틀 시퀀스로 제작하였습니다.<br/>순서대로 다크카카오왕국의 전체샷과 실내로 들어가는 모습,<br/>남겨진 왕관과 검을 보여줌으로써 쿠키런 킹덤 다크카카오 에피소드의 스토리를 요약했습니다."
+        }
+      ]
     },
     {
       "id": "1003",
-      "designerName": "김사랑",
-      "postName": "토르의 망치를 되찾아라",
-      "client": "3M 스카치™ 브랜드",
-      "clientDescription": "400종 이상의 접착 테이프, 스프레이 접착제, 순간 접착제부터 테이프 디스펜서와 코팅기까지 무수한 제품을 선보인 브랜드입니다.",
-      "subDescription": ""
+      "vedioThumb" : "01.jgp",
+      "designerName": [
+        "김참슬"
+      ],
+      "postName": "SM Aespa",
+      "client": "SM Aespa",
+      "clientDescription": "가상현실을 컨셉으로 한 SM엔터테인먼트 소속의 걸그룹입니다.<br/>미래지향적 일렉트로닉 신스팝 장르의 음악으로 인기를 끌었습니다.",
+      "subDescription": "",
+      "stillCuts": [
+        {
+          "img":"03.jpg",
+          "desc":"1. 지젤의 눈동자로 스파이 멤버 '윈터'를 보여줌으로써 지젤은 어렴풋이 배신자를 알고 있음을 보여준다"
+        },
+        {
+          "img":"04.jpg",
+          "desc":"2. -"
+        },
+        {
+          "img":"05.jpg",
+          "desc":"3. 의미심장한 웃음으로 분위기가 고조된다."
+        },
+        {
+          "img":"06.jpg",
+          "desc":"4. 에스파의 SF 판타지적인 배경을 보여준다."
+        }
+      ],
+      "storyBoard" :[
+        {
+          "img" : "07.jpg"
+        }
+      ]
     },
     {
       "id": "1004",
@@ -1033,6 +1078,7 @@
     },
     {
       "id": "1005",
+      "vedioThumb" : "01.png",
       "designerName": "김참슬",
       "postName": "플라이 하고 싶다면?",
       "client": "Sony PS-LX310BT Lp Player",
@@ -1041,6 +1087,7 @@
     },
     {
       "id": "1006",
+      "vedioThumb" : "01.png",
       "designerName": "김태영",
       "postName": "맥모닝으로 깨우세요!",
       "client": "맥도날드",
@@ -1049,6 +1096,7 @@
     },
     {
       "id": "1007",
+      "vedioThumb" : "01.png",
       "designerName": "김혜령",
       "postName": "Papa John's",
       "client": "Papa John's",
@@ -1057,6 +1105,7 @@
     },
     {
       "id": "1008",
+      "vedioThumb" : "01.png",
       "designerName": "김효진",
       "postName": "지구에게 선글라스를!",
       "client": "환경부",
@@ -1065,6 +1114,7 @@
     },
     {
       "id": "1009",
+      "vedioThumb" : "01.png",
       "designerName": "노동균",
       "postName": "위험은 생각보다 가까운 곳에 있습니다",
       "client": "한국전기안전공사",
@@ -1073,6 +1123,7 @@
     },
     {
       "id": "1010",
+      "vedioThumb" : "01.png",
       "designerName": "서지원",
       "postName": "나보다 더 나다운",
       "client": "무신사",
@@ -1081,6 +1132,7 @@
     },
     {
       "id": "1011",
+      "vedioThumb" : "01.png",
       "designerName": "송정호",
       "postName": "몇층 가세요?",
       "client": "한국시각장애인연합회",
@@ -1089,6 +1141,7 @@
     },
     {
       "id": "1012",
+      "vedioThumb" : "01.png",
       "designerName": "안성현",
       "postName": "Back Draft",
       "client": "Back Draft",
@@ -1097,6 +1150,7 @@
     },
     {
       "id": "1013",
+      "vedioThumb" : "01.png",
       "designerName": "안장현",
       "postName": "NFT Sound",
       "client": "BMW NFT",
@@ -1105,6 +1159,7 @@
     },
     {
       "id": "1014",
+      "vedioThumb" : "01.png",
       "designerName": "여수지",
       "postName": "<이제, 현실로 돌아갈 시간>",
       "client": "inno.N - 확깬다 컨디션!",
@@ -1113,6 +1168,7 @@
     },
     {
       "id": "1015",
+      "vedioThumb" : "01.png",
       "designerName": "예주은",
       "postName": "유령들의 런웨이",
       "client": "Nice Ghost Club",
@@ -1121,6 +1177,7 @@
     },
     {
       "id": "1016",
+      "vedioThumb" : "01.png",
       "designerName": "오수경",
       "postName": "경복궁 별빛야행",
       "client": "별빛야행",
@@ -1129,6 +1186,7 @@
     },
     {
       "id": "1017",
+      "vedioThumb" : "01.png",
       "designerName": "오승은",
       "postName": "달리는 숲,깨끗한 도시",
       "client": "",
@@ -1137,6 +1195,7 @@
     },
     {
       "id": "1018",
+      "vedioThumb" : "01.png",
       "designerName": "왕영은",
       "postName": "MEET PLAY SHARE",
       "client": "MEGABOX",
@@ -1145,6 +1204,7 @@
     },
     {
       "id": "1019",
+      "vedioThumb" : "01.png",
       "designerName": "위혜림",
       "postName": "가장 편안한 휴식",
       "client": "JBL",
@@ -1153,6 +1213,7 @@
     },
     {
       "id": "1020",
+      "vedioThumb" : "01.png",
       "designerName": "유영훈",
       "postName": "Supersense",
       "client": "Kiehl's",
@@ -1161,6 +1222,7 @@
     },
     {
       "id": "1021",
+      "vedioThumb" : "01.png",
       "designerName": "이건희",
       "postName": "IAMAI",
       "client": " IAMAI-Netflix",
@@ -1169,6 +1231,7 @@
     },
     {
       "id": "1022",
+      "vedioThumb" : "01.png",
       "designerName": "이기석",
       "postName": "자연의 순수함을 담다",
       "client": "페브리즈",
@@ -1177,6 +1240,7 @@
     },
     {
       "id": "1023",
+      "vedioThumb" : "01.png",
       "designerName": "이민혁",
       "postName": "신선 그자체",
       "client": "GS25",
@@ -1185,6 +1249,7 @@
     },
     {
       "id": "1024",
+      "vedioThumb" : "01.png",
       "designerName": "이성준",
       "postName": "자각몽(自覺夢)",
       "client": "COMBAT",
@@ -1193,6 +1258,7 @@
     },
     {
       "id": "1025",
+      "vedioThumb" : "01.png",
       "designerName": "이승호",
       "postName": "한 발자국도 남김 없이",
       "client": "LEADNCO",
@@ -1201,6 +1267,7 @@
     },
     {
       "id": "1026",
+      "vedioThumb" : "01.png",
       "designerName": "이윤정",
       "postName": "아는 것이 힘",
       "client": "교보문고",
@@ -1209,6 +1276,7 @@
     },
     {
       "id": "1027",
+      "vedioThumb" : "01.png",
       "designerName": "이윤지",
       "postName": "같은 취향을 공유하다 ",
       "client": "Naver VIBE",
@@ -1217,6 +1285,7 @@
     },
     {
       "id": "1028",
+      "vedioThumb" : "01.png",
       "designerName": "이지혁",
       "postName": "THE GALATEA",
       "client": "GENESIS",
@@ -1225,6 +1294,7 @@
     },
     {
       "id": "1029",
+      "vedioThumb" : "01.png",
       "designerName": "이채원",
       "postName": "PEACH로 과즙충전!",
       "client": "롯데칠성음료",
@@ -1233,6 +1303,7 @@
     },
     {
       "id": "1030",
+      "vedioThumb" : "01.png",
       "designerName": "이채은",
       "postName": "내 손 안 집들이",
       "client": "오늘의집",
@@ -1241,6 +1312,7 @@
     },
     {
       "id": "1031",
+      "vedioThumb" : "01.png",
       "designerName": "",
       "postName": "",
       "client": "",
@@ -1249,6 +1321,7 @@
     },
     {
       "id": "1032",
+      "vedioThumb" : "01.png",
       "designerName": "이혜린 ",
       "postName": "Blooming Your Scent",
       "client": "조말론 런던",
@@ -1257,6 +1330,7 @@
     },
     {
       "id": "1034",
+      "vedioThumb" : "01.png",
       "designerName": "장소정",
       "postName": "악플 흉터",
       "client": "한국방송광고진흥공사",
@@ -1265,6 +1339,7 @@
     },
     {
       "id": "1035",
+      "vedioThumb" : "01.png",
       "designerName": "장인규",
       "postName": "상상력을 높이세요.",
       "client": "imagination",
@@ -1273,6 +1348,7 @@
     },
     {
       "id": "1036",
+      "vedioThumb" : "01.png",
       "designerName": "정우경",
       "postName": "필라이트",
       "client": "필라이트",
@@ -1281,6 +1357,7 @@
     },
     {
       "id": "1037",
+      "vedioThumb" : "01.png",
       "designerName": "정진모",
       "postName": "스마트폰 안에 마트 있다!",
       "client": "Kurly (컬리)",
@@ -1289,6 +1366,7 @@
     },
     {
       "id": "1038",
+      "vedioThumb" : "01.png",
       "designerName": "조민국",
       "postName": "無에서 무로 끝났다.",
       "client": "MUSINSA",
@@ -1297,6 +1375,7 @@
     },
     {
       "id": "1039",
+      "vedioThumb" : "01.png",
       "designerName": "최명진",
       "postName": "진짜 자연은 제거할 때 보입니다",
       "client": "삼다수",
@@ -1305,6 +1384,7 @@
     },
     {
       "id": "1040",
+      "vedioThumb" : "01.png",
       "designerName": "최하현",
       "postName": "가히 링클 바운스 멀티밤",
       "client": "가히",
@@ -1313,6 +1393,7 @@
     },
     {
       "id": "1041",
+      "vedioThumb" : "01.png",
       "designerName": "최효민",
       "postName": "재생하다",
       "client": "FREITAG",
@@ -1321,6 +1402,7 @@
     },
     {
       "id": "1042",
+      "vedioThumb" : "01.png",
       "designerName": "한유정",
       "postName": "Dr Pepper",
       "client": "Coca-Cola Korea",
@@ -1329,6 +1411,7 @@
     },
     {
       "id": "1043",
+      "vedioThumb" : "01.png",
       "designerName": "홍은택",
       "postName": "마지막 주사위",
       "client": "Kobaco",
@@ -1337,6 +1420,7 @@
     },
     {
       "id": "1044",
+      "vedioThumb" : "01.png",
       "designerName": "홍채은",
       "postName": "미식도사 테이블링",
       "client": "테이블링",

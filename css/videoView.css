@@ -18,7 +18,7 @@
 }
 
 .project-section-text {
-  font-size: 1rem;
+  font-size: 18px !important;
   line-height: 1.8;
   color: #ccc;
   margin-bottom: 40px;
@@ -174,20 +174,96 @@ object-fit: cover;
 }
 
 .project-client {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #aaa;
   margin-bottom: 1rem;
 }
 
 .project-description {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #ccc;
   line-height: 1.7;
+  text-align: center;
+
+}
+hr{
+  width: 100%;
+  margin: 0 auto;
+  color: #212121;
+    margin-top: 30px;
+  margin-bottom: 30px;
 }
 .project-footer {
   text-align: center;
   color: #aaa;
   font-size: 0.85rem;
+}
+
+.project-StillCut{
+  width: 1440px;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.project-StillCut h1{
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.project-StillCut h3{
+  font-size: 2rem !important;
+}
+
+
+.stillcut-block {
+  position: relative;
+  height: auto;
+  min-height: 400px; /* ensure space for absolutely positioned image */
+}
+
+.stillcut-block .overlay-fade {
+  display: none; /* completely disable black overlay */
+}
+
+.stillcut-block {
+  margin-bottom: 48px;
+}
+
+.stillcut-block h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.stillcut-block p {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.stillcut-block img {
+  margin-top: 16px;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: opacity 0.6s ease-in-out;
+  opacity: 1;
+}
+
+.stillcut-block img.fade-out {
+  opacity: 0;
+}
+
+.stillcut-block img.slideshow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: opacity 0.6s ease-in-out;
+  opacity: 1;
 }
 
 .footer-divider {
@@ -239,4 +315,21 @@ object-fit: cover;
     gap: 1rem;
     font-size: 1rem;
   }
+}
+
+.slideshow-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+}
+
+.slideshow-wrapper img.slideshow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: opacity 0.6s ease-in-out;
 }
