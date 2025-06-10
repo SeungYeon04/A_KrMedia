@@ -220,49 +220,50 @@ hr{
   font-size: 0.85rem;
 }
 
-.project-StillCut{
+.project-StillCut , .project-storyBoard{
   width: 1440px;
+  max-width: 1440px;
   max-width: 90%;
   height: auto;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
-.project-StillCut h1{
+.project-StillCut h1 , .project-storyBoard h1{
   font-size: 3rem;
   margin-bottom: 2rem;
 }
-.project-StillCut h3{
+.project-StillCut h3 , .project-storyBoard h3{
   font-size: 2rem !important;
 }
 
 
-.stillcut-block {
+.stillcut-block ,.storyboard-block{
   position: relative;
   height: auto;
   min-height: 400px; /* ensure space for absolutely positioned image */
 }
 
-.stillcut-block .overlay-fade {
+.stillcut-block .overlay-fade , storyboard-block .overlay-fade{
   display: none; /* completely disable black overlay */
 }
 
-.stillcut-block {
+.stillcut-block ,.storyboard-block{
   margin-bottom: 48px;
 }
 
-.stillcut-block h3 {
+.stillcut-block , .storyboard-block h3 {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.stillcut-block p {
+.stillcut-block p , .storyboard-block p{
   margin-top: 0.3rem;
   font-size: 1rem;
   color: #ccc;
 }
 
-.stillcut-block img {
+.stillcut-block img ,.storyboard-block img{
   margin-top: 16px;
   width: 100%;
   max-width: 100%;
@@ -272,11 +273,11 @@ hr{
   opacity: 1;
 }
 
-.stillcut-block img.fade-out {
+.stillcut-block img.fade-out ,.storyboard-block img.fade-out{
   opacity: 0;
 }
 
-.stillcut-block img.slideshow {
+.stillcut-block img.slideshow ,.storyboard-block img.slideshow{
   position: absolute;
   width: 100%;
   height: 100%;
