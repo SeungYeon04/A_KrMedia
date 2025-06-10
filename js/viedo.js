@@ -16,7 +16,7 @@ fetch("../module/header.html")
 
 document.addEventListener("DOMContentLoaded", () => {
   function tryLoadImageByImageTag(imgEl, name, file, fallback) {
-    const folders = ["VideoSorce", "VideoSorce1", "VideoSorce2"];
+    const folders = ["VideoSorce", "VideoSorce01", "VideoSorce02"];
     const base = "https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/";
     const encodedName = encodeURIComponent(name);
     const encodedFile = encodeURIComponent(file);
@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const designer = data.디자이너.find(d => designerNames.includes(d.name));
       // 타이틀 및 설명 채우기
       document.title = videoData.postName;
-      document.querySelector('.project-title').innerHTML  = `${videoData.postName}`;
-      document.querySelector('.project-client').innerHTML  = `클라이언트 : ${videoData.client}`;
-      document.querySelector('.project-description').innerHTML  = videoData.clientDescription;
-      document.querySelector('.project-section-text').innerHTML  = videoData.videoDescription;
+      document.querySelector('.project-title').innerHTML = `${videoData.postName}`;
+      document.querySelector('.project-client').innerHTML = `클라이언트 : ${videoData.client}`;
+      document.querySelector('.project-description').innerHTML = videoData.clientDescription;
+      document.querySelector('.project-section-text').innerHTML = videoData.videoDescription;
 
       // 이미지 로딩 (Image 태그 기반 폴백)
       if (designer) {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "img/default.png"
         );
       }
-            // Vimeo 비디오 삽입
+      // Vimeo 비디오 삽입
       if (videoData.vimeoId) {
         const iframe = document.createElement("iframe");
         iframe.src = `https://player.vimeo.com/video/${videoData.vimeoId}`;
@@ -96,47 +96,63 @@ document.addEventListener("DOMContentLoaded", () => {
           block.className = "stillcut-block";
           const isArray = Array.isArray(cut.img);
           let imgHTML = "";
-          if (isArray) {
+          console.log(cut.img)
+          if (isArray && cut.img != '') {
             imgHTML = `
-              <div class="slideshow-wrapper">
-                <img class="slideshow slideshow-a" data-index="0" src="https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsersWorkData%2F${encodedName}%2FVideoSorce%2F${encodeURIComponent(cut.img[0])}?alt=media">
-                <img class="slideshow slideshow-b" data-index="0" style="opacity: 0;" src="">
-              </div>
-            `;
-          } else {
-            imgHTML = `<img src="https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsersWorkData%2F${encodedName}%2FVideoSorce%2F${encodeURIComponent(cut.img)}?alt=media">`;
-          }
-          block.innerHTML = `
-            <h3>${cut.desc.split('<br/>')[0]}</h3>
-            <p>${cut.desc.split('<br/>').slice(1).join('<br/>')}</p>
-            ${imgHTML}
-          `;
+                <div class="slideshow-wrapper">
+                  <img class="slideshow slideshow-a" data-index="0" data-img="${cut.img[0]}" src="">
+                  <img class="slideshow slideshow-b" data-index="0" style="opacity: 0;" src="">
+                </div>
+              `;
+              } else {
+                if(cut.img != null){
+                  imgHTML = `<img class="single-image" data-img="${cut.img}" src="">`;
+                }
+              }
+
+              block.innerHTML = `
+                <h3>${cut.desc.split('<br/>')[0]}</h3>
+                <p>${cut.desc.split('<br/>').slice(1).join('<br/>')}</p>
+                ${imgHTML}
+              `;
+
           stillCutContainer.appendChild(block);
+
+          // 이미지 로드 시도
+          const baseImgEls = block.querySelectorAll("img[data-img]");
+          baseImgEls.forEach((imgEl) => {
+            tryLoadImageByImageTag(
+              imgEl,
+              Array.isArray(videoData.designerName) ? videoData.designerName[0] : videoData.designerName,
+              imgEl.dataset.img
+            );
+          });
         });
-        // Slideshow logic (two static <img> tags crossfade)
+        // Slideshow logic
         setInterval(() => {
           document.querySelectorAll('.slideshow-wrapper').forEach((wrapper, i) => {
             const parentCut = videoData.stillCuts[i];
             if (!Array.isArray(parentCut.img)) return;
 
-            const encodedName = encodeURIComponent(
-              Array.isArray(videoData.designerName) ? videoData.designerName[0] : videoData.designerName
-            );
-
             const imgA = wrapper.querySelector('.slideshow-a');
             const imgB = wrapper.querySelector('.slideshow-b');
             let current = parseInt(imgA.dataset.index || "0");
             const nextIndex = (current + 1) % parentCut.img.length;
-            const nextSrc = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsersWorkData%2F${encodedName}%2FVideoSorce%2F${encodeURIComponent(parentCut.img[nextIndex])}?alt=media`;
 
-            imgB.src = nextSrc;
+            imgB.dataset.img = parentCut.img[nextIndex];
             imgB.dataset.index = nextIndex;
+
+            tryLoadImageByImageTag(
+              imgB,
+              Array.isArray(videoData.designerName) ? videoData.designerName[0] : videoData.designerName,
+              parentCut.img[nextIndex],
+              "img/default.png"
+            );
 
             imgB.onload = () => {
               imgA.style.opacity = 0;
               imgB.style.opacity = 1;
 
-              // swap class names
               imgA.classList.remove('slideshow-a');
               imgA.classList.add('slideshow-b');
               imgB.classList.remove('slideshow-b');
@@ -148,13 +164,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // 푸터 정보
       const footer = document.querySelector('.project-footer-author');
-      
+
       videoData.designerName.forEach((name, index) => {
         const designer = data.디자이너.find(d => d.name === name);
-        
+
         const designName = document.createElement('div');
-        const img  = document.createElement('img');
-        
+        const img = document.createElement('img');
+
         img.className = 'footer-author-img';
         designName.className = 'footer-author-name';
 
@@ -163,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
           designName.textContent = designer?.name || "Unknown";
           img.src =
             designer ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsers%2F${encodeURIComponent(designer.name)}.jpg?alt=media`
-            : "fallback.jpg";
+              : "fallback.jpg";
         }
         footer.appendChild(img);
         footer.appendChild(designName);

@@ -304,15 +304,15 @@ hr{
 }
 
 .footer-author-img {
-  width: 20rem;
+  width: 17rem;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
 }
 
 .footer-author-name {
-  font-size: 5rem;
-  font-weight: 800;
+  font-size: 4rem;
+  font-weight: 600;
   color: #fff;
 }
 
