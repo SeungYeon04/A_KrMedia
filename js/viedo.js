@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tryLoadImageByImageTag(
           document.querySelector('.project-main-img'),
           designer.name,
-          videoData.vedioThumb,
+          videoData.videoThumb,
           "img/default.png"
         );
       }
@@ -147,10 +147,26 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // 푸터 정보
-      document.querySelector('.footer-author-name').textContent = designer?.name || "Unknown";
-      document.querySelector('.footer-author-img').src =
-        designer ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsers%2F${encodeURIComponent(designer.name)}.jpg?alt=media`
-        : "fallback.jpg";
+      const footer = document.querySelector('.project-footer-author');
+      
+      videoData.designerName.forEach((name, index) => {
+        const designer = data.디자이너.find(d => d.name === name);
+        
+        const designName = document.createElement('div');
+        const img  = document.createElement('img');
+        
+        img.className = 'footer-author-img';
+        designName.className = 'footer-author-name';
 
+        if (designer) {
+
+          designName.textContent = designer?.name || "Unknown";
+          img.src =
+            designer ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsers%2F${encodeURIComponent(designer.name)}.jpg?alt=media`
+            : "fallback.jpg";
+        }
+        footer.appendChild(img);
+        footer.appendChild(designName);
+      });
     });
 });

@@ -70,6 +70,27 @@ body {
   font-size: 1.1rem;
   letter-spacing: 0.2px;
 }
+.footer-authors {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.footer-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-author-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.footer-author-name {
+  margin-top: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   .project-visual-full {
     aspect-ratio: 16 / 9;
@@ -269,8 +290,8 @@ hr{
 .footer-divider {
   border-top: 1px solid #666;
   margin: 40px auto;
-  width: 90%;
-  max-width: 1000px;
+  width: 70%;
+
 }
 
 .project-footer-author {
