@@ -1223,19 +1223,27 @@
     },
     {
       "id": "1012",
-      "videoThumb" : "01.png",
-      "designerName": "안성현",
-      "postName": "Back Draft",
-      "client": "Back Draft",
-      "clientDescription": "‘Back Draft’는 1991년에 상영된<br/>소방과 화재를 주제로 한액션, 드라마 영화 입니다",
-      "videoDescription": "역류되는 불꽃들 사이에서 꺼져가는 생명을 구하기 위해<br/>들어가는 소방관의 뒷모습을 표현했습니다 "
+      "videoThumb" : "02.jpg",
+      "vimeoId":"835136714",
+      "designerName": ["여수지"],
+      "postName": "끊이지 않는 촉촉함!",
+      "client": "Vaseline",
+      "clientDescription": "1870년부터 아름답고 건강한 피부를 위한 제품을 만들고 있는 스킨케어 브랜드입니다.",
+      "videoDescription": "",
+      "stillCuts": [
+        {
+          "img": ["02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg"],
+          "desc": "<h4>핸드 크림이라는 제품을 생각하면 떠오르는 가장 대표적인 키워드인 촉촉함.<br/><h4>그중에서도 뛰어나고 오래 가는 보습력을 자랑하는 바세린의 핸드 크림을 '이어달리기' 에 빗대어<br/><h4>멈추지 않고 오래 가는 촉촉함을 애니메이션으로 담아냈습니다."
+        }
+      ]
     },
     {
       "id": "1013",
       "videoThumb" : "01.png",
-      "designerName": "안장현",
-      "postName": "NFT Sound",
-      "client": "BMW NFT",
+      "designerName": ["오수경"],
+
+      "postName": "Queen’s Gambit",
+      "client": "NETFLEX",
       "clientDescription": "독일의 프리미엄 자동차 및 오토바이 제조사로서, 스포츠 세단의 아이콘이자 시장의 왕좌",
       "videoDescription": "전기차로 인해 점차 사라져가는 엔진 사운드를 기억하기 위해서 BMW에서는 사운드를 NFT로 제작하였습니다.<br/>실체가 없는 NFT에서 영감을 얻어 엔진 소리를 들으면 머릿속에서 자동차가 그려지게끔 상상하였습니다."
     },
