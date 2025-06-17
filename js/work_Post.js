@@ -41,7 +41,7 @@ function loadFirstValidImageAsync(urls) {
   return new Promise((resolve, reject) => {
     const tryNext = (index) => {
       if (index >= urls.length) {
-        reject();
+        reject(new Error("유효한 이미지 URL을 찾지 못했습니다")); // 🔥 명시적으로 에러 던짐
         return;
       }
       const img = new Image();
@@ -75,7 +75,7 @@ fetch(`/data/${year}.json`)
             <img id="${postId}" src="${placeholder}" alt="${post.postName}_포스터" class="img-responsive">
           </div>
           <h3 class="head_title"><span>${designer.name}</span></h3>
-          <h3><span>${post.postName}</span></h3>
+          <h3><span style='font-size:16px'>${post.postName}</span></h3>
         </a>
       `;
       postGrid.appendChild(div);
@@ -94,7 +94,6 @@ fetch(`/data/${year}.json`)
       // 1. 디자이너 정보 찾기 (designerName이 배열일 경우 첫번째 값 사용)
       const designerName = Array.isArray(video.designerName) ? video.designerName[0] : video.designerName;
       const designer = data.디자이너.find(d => d.name === designerName);
-      if (!designer) return null;
 
       // 2. 여러 VideoSorce 폴더 중 유효한 이미지 URL을 병렬로 탐색
       try {
@@ -108,12 +107,11 @@ fetch(`/data/${year}.json`)
               <img src="${validUrl}" alt="${designer.postName}_비디오썸네일" class="img-responsive">
             </div>
             <h3 class="head_title"><span>${Array.isArray(video.designerName) ? video.designerName.join(", ") : video.designerName}</span></h3>
-            <h3><span>${video.postName}</span></h3>
+            <h3><span style='font-size:16px'>${video.postName}</span></h3>
           </a>
         `};
       } catch {
         // 5. 유효한 이미지가 없으면 null 반환
-        return null;
       }
     });
     // 6. 모든 비디오 썸네일 로딩이 끝나면, 순서대로 DOM에 추가
@@ -129,23 +127,25 @@ fetch(`/data/${year}.json`)
     });
 
     
-    // ✅ TEAM 탭 (신 구조 - data.팀 사용)
-    // ✅ TEAM 탭
+    // 파이어베이스에서 팀이름이나 클라이언트 이름으로 된 폴더를 찾는다. 
     data.팀.forEach(team => {
-      const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(team.teamThumbnail)}?alt=media`;
-      const description = team.teamDescription || "";
+  const folder = encodeURIComponent(team.teamfolder || team.teamName); // 🔁 teamfolder 우선 사용
+  const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder}%2F${encodeURIComponent(team.teamThumbnail)}?alt=media`;
+  const description = team.teamDescription || "";
 
-      const teamDiv = document.createElement('div');
-      teamDiv.innerHTML = `
-       <a href="./teamView.html?year=${year}&id=${encodeURIComponent(team.id)}" class="grid-item">
-          <div class="designer-img-wrap">
-            <img src="${imgUrl}" alt="${team.teamName}_썸네일" class="img-responsive">
-          </div>
-          <h2 class="head_title"><span>${team.teamName}</span></h2>
-        </a>
-      `;
-      teamGrid.appendChild(teamDiv);
-    });
+  const teamDiv = document.createElement('div');
+  teamDiv.innerHTML = `
+   <a href="./teamView.html?year=${year}&id=${encodeURIComponent(team.id)}" class="grid-item">
+    <div class="designer-img-wrap">
+      <img src="${imgUrl}" alt="${team.teamName}_썸네일" class="img-responsive">
+    </div>
+    <h3 class="head_title"><span>${team.teamName}</span></h3>
+    <h3><span style="font-size: 16px;">${team.videoName || ""}</span></h3>
+  </a>
+  `;
+  teamGrid.appendChild(teamDiv);
+});
+
   });
 
 {/* <p class="eng_sub">${team.teamNameEng}</p>
