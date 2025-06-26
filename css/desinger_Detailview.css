@@ -508,3 +508,61 @@ h1.project-title {
     position: relative;
     border-radius: 10px;
 }
+
+/**/
+
+.designer-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 60%;
+  margin: 40px auto; /* 가운데 정렬 */
+  gap: 12px;
+}
+
+.designer-navigation button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* 썸네일 컨테이너 */
+.designer-thumbnails {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+
+.thumb-link {
+  width: 20%;  /* ✅ 고정 크기 또는 비율 유지 */
+  height: 30%;
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 썸네일 이미지 */
+.thumb-link .thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #888;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.thumb-link .thumb-img:hover {
+  transform: scale(1.05);
+  border-color: white;
+}
+

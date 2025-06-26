@@ -179,3 +179,45 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".detail-container").innerHTML = `<p>데이터를 불러오는 중 오류가 발생했습니다: ${error.message}</p>`;
     });
 });
+
+fetch(`/data/${year}.json`)
+  .then(res => res.json())
+  .then(data => {
+    const designers = data["디자이너"];
+    const currentIndex = designers.findIndex(d => d.name === designerId);
+    if (currentIndex === -1) return;
+
+    const prevIndex = (currentIndex - 1 + designers.length) % designers.length;
+    const nextIndex = (currentIndex + 1) % designers.length;
+
+    // ← 이전 디자이너 버튼
+    document.getElementById("prevDesigner").onclick = () => {
+      const prevName = designers[prevIndex].name;
+      location.href = `/view/designerDetail.html?year=${year}&id=${encodeURIComponent(prevName)}`;
+    };
+
+    // → 다음 디자이너 버튼
+    document.getElementById("nextDesigner").onclick = () => {
+      const nextName = designers[nextIndex].name;
+      location.href = `/view/designerDetail.html?year=${year}&id=${encodeURIComponent(nextName)}`;
+    };
+
+    // 썸네일 4개 (앞 2명, 뒤 2명)
+    const thumbWrap = document.getElementById("designerThumbs");
+    [-2, -1, 1, 2].forEach(offset => {
+      const index = (currentIndex + offset + designers.length) % designers.length;
+      const d = designers[index];
+
+      const a = document.createElement("a");
+      a.href = `/view/designerDetail.html?year=${year}&id=${encodeURIComponent(d.name)}`;
+      a.classList.add("thumb-link"); // ✅ CSS로만 스타일
+
+      const img = document.createElement("img");
+      img.src = getImgUrl(d.name);
+      img.alt = d.name;
+      img.classList.add("thumb-img"); // ✅ CSS로만 스타일
+
+      a.appendChild(img);
+      thumbWrap.appendChild(a);
+    });
+  });
