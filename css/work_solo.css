@@ -1,68 +1,76 @@
-/* work_solo.css */
-
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-}
-
-body {
   background-color: black;
   color: white;
+
+  /* 🔷 추가: body에 전체 페이지의 최대 너비를 설정합니다. */
+  /* 이렇게 하면 모든 콘텐츠가 이 너비 안에서 중앙 정렬됩니다. */
+  max-width: 1280px; /* 원하는 최대 너비로 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  padding: 0 40px; /* 좌우 여백 추가 (필요에 따라 조절) */
 }
 
-/* Project list and active tab panel grid layout */
-/* Project list and active tab panel grid layout */
-#project-list,
-.tab-panel.active {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  margin-right: 20px;
-  padding: 0 15%;
-  justify-items: center;
-  align-items: start;
-}
-
+/* 메인 컨텐츠 영역 */
 #tab-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 100%; /* 부모(body)의 전체 너비를 사용하도록 설정 */
 }
 
+/* 🔷 프로젝트 리스트 그리드 설정 */
+#project-list,
+.tab-panel.active {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  /* 🔷 제거: max-width, padding, margin을 body로 이동했으므로 여기서는 필요 없습니다. */
+  /* max-width: 1280px; */
+  /* padding: 0 40px; */
+  /* margin: 0 auto; */
+  justify-items: center;
+  align-items: start;
+  width: 100%; /* 부모 요소의 전체 너비를 사용하도록 설정 */
+}
+
+/* 개별 그리드 아이템 */
 .grid-item {
+  width: 100%;
+  max-width: 240px; /* 개별 아이템의 최대 너비를 유지합니다. */
   text-align: center;
   color: white;
   text-decoration: none;
   transition: transform 0.3s ease;
   animation: pieceTogether 0.6s ease-out forwards;
   opacity: 0;
-  margin-bottom: 24px;
 }
 
 .grid-item:hover {
   transform: scale(1.05);
 }
 
+/* 이미지 래퍼 */
 .designer-img-wrap {
   width: 100%;
-  aspect-ratio: 1 / 1; /* 정사각형 */
-  max-width: 250px;
-  min-width: 250px;
-  border-radius: 10px;
+  aspect-ratio: 1 / 1;
   background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
+
 .designer-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center; /* 🔥 중심 고정 */
+  object-position: center;
   border-radius: 10px;
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -73,25 +81,29 @@ body {
   font-weight: 500;
   line-height: 1.4;
 }
+
+/* 페이지 상단 헤더 */
 .work-header {
-  padding:0px 15.5%;
+  /* 🔷 수정: body에 padding이 적용되므로 여기서는 제거하거나 조절합니다. */
+  padding: 0; /* 또는 필요에 따라 좌우 여백을 조절 */
   text-align: left;
+  margin-top: 30px; /* body padding과 겹치지 않도록 조절 */
   margin-bottom: 30px;
 }
+
 .page-title {
-  font-size:1.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: white;
+  /* margin-top: 30px; 🔷 body에 이미 여백이 있으므로 여기서 마진을 제거하거나 조절 */
   text-align: left;
-  margin-top: 30px;
-
 }
+
+/* 탭 메뉴 */
 .tab-menu {
   display: flex;
   justify-content: flex-start;
   gap: 24px;
-  padding: 0;
-  background-color: transparent;
 }
 
 .tab-button {
@@ -108,71 +120,27 @@ body {
   color: #fabc11;
 }
 
-/* Hide inactive tab panels, padding is handled in active state above */
+/* 탭 패널 숨기기 */
 .tab-panel {
   display: none;
 }
-@media (max-width: 700px) {
-  #project-list,
-  .tab-panel.active {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 16px;
-    gap: 12px;
-  }
 
-  .work-header {
-    padding: 0 8%;
-    text-align: left;
-  }
-
-  .page-title {
-    font-size: 1.5rem;
-    margin: 20px 0 12px;
-    text-align: left;
-  }
-
-  .tab-menu {
-    flex-direction: row;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-
-  .tab-button {
-    font-size: 1rem;
-    margin-top: 0;
-  }
-}
-#project-list,
-.tab-panel.active {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 2fr));
-  gap: 40px 30px;
-  margin-right: 20px;
-  padding: 0 15%;
-  justify-items: center;
-  align-items: start;
-}
-
-.footer-copyright{
+/* 푸터 */
+.footer-copyright {
   margin-top: auto;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding: 30px 0 50px;
   text-align: center;
   color: #aaa;
   font-size: 0.85rem;
 }
 
-.grid-item.no-image {
-  position: relative;
-}
-
+/* 이미지 없을 경우 대체 처리 */
 .grid-item.no-image .designer-img-wrap {
-  position: relative;
   background-color: #1e1e1e;
+  position: relative;
   overflow: hidden;
 }
 
-/* shimmer effect */
 .grid-item.no-image .designer-img-wrap::before {
   content: "";
   position: absolute;
@@ -182,7 +150,6 @@ body {
   opacity: 0.3;
 }
 
-/* text overlay */
 .grid-item.no-image .designer-img-wrap::after {
   content: "준비중...";
   position: absolute;
@@ -195,6 +162,7 @@ body {
   pointer-events: none;
 }
 
+/* 🔄 애니메이션 */
 @keyframes shimmer {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }

@@ -1,94 +1,97 @@
-
 <!DOCTYPE html>
 <html lang="ko" id="no-fouc">
-    <link rel="stylesheet" href="/css/all_header.css" />
-    <link rel="stylesheet" href="/css/all_fonts.css">
-    <script src="/js/all_headerText.js"></script>
+<link rel="stylesheet" href="/css/all_header.css" />
+<link rel="stylesheet" href="/css/all_fonts.css">
+<script src="/js/all_headerText.js"></script>
+
 <head>
-<title>한국영상대학교 영상디자인과 졸업전시</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="/css/intro_video.css">
-<script src="/js/all_year.js"></script>
-<!-- head 안에 삽입 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <title>한국영상대학교 영상디자인과 졸업전시</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/intro_video.css">
+  <script src="/js/all_year.js"></script>
+  <!-- head 안에 삽입 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 
 </head>
 <style>
   .menu-overlay {
-  position: absolute;
-  top: 50%;
-  left: 30%; /* 왼쪽으로 약간 이동 */
-  transform: translateY(-50%);
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: flex-start;
-}
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    /* 왼쪽으로 약간 이동 */
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
 
-.menu-overlay button {
-  background: none;
-  border: none;
-  font-size: 35px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  padding: 5px 0;
-}
+  .menu-overlay button {
+    background: none;
+    border: none;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+  }
 
-.menu-overlay button:hover {
-  color: #ffcc00;
-}
-
+  .menu-overlay button:hover {
+    color: #ffcc00;
+  }
 </style>
+
 <body>
 
 
-<div id="header-md"></div>
+  <div id="header-md"></div>
 
-<!-- www.youtube.com/embed/ZdQcr8xURNk 다운하자 그냥 -->
-<div class="video-container">
+  <!-- www.youtube.com/embed/ZdQcr8xURNk 다운하자 그냥 -->
+  <div class="video-container">
     <video id="yearVideo" autoplay muted loop playsinline>
-        <source id="videoSource" type="video/mp4" >
-        브라우저가 비디오 태그를 지원하지 않습니다.
+      <source id="videoSource" type="video/mp4">
+      브라우저가 비디오 태그를 지원하지 않습니다.
     </video>
-</div>
-<div class="menu-overlay">
+  </div>
+  <div class="menu-overlay">
     <button onclick="goTo('Works.html')">Works</button>
     <button onclick="goTo('designer.html')">Designer</button>
     <button onclick="goTo('ThanksTo.html')">Thanks To</button>
-</div>
+  </div>
 
 
-<!-- footer 렌더링 -->
-<div id="footer-text" style="text-align: center; margin: 1.1% 0 0 20px; font-size: 12px; position:relative; z-index:2; color: gray;">
-  © <span id="footer-year"></span>. DESIGNTHEHAM Co. all rights reserved.
-</div>
-<script>
-  const params = new URLSearchParams(window.location.search); // ← 이 줄 추가
-  const selectedYear = params.get("year");
-  document.getElementById("footer-year").textContent = selectedYear;
+  <!-- footer 렌더링 -->
+  <div id="footer-text"
+    style="text-align: center; margin: 1.1% 0 0 20px; font-size: 12px; position:relative; z-index:2; color: gray;">
+    © <span id="footer-year"></span>. DESIGNTHEHAM Co. all rights reserved.
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search); // ← 이 줄 추가
+    const selectedYear = params.get("year");
+    document.getElementById("footer-year").textContent = selectedYear;
 
     // 비디오 소스 설정
-  const videoSrc = `/video/${selectedYear}.mp4`;
-  const video = document.getElementById("yearVideo");
-  const source = document.getElementById("videoSource");
+    const videoSrc = `/video/${selectedYear}.mp4`;
+    const video = document.getElementById("yearVideo");
+    const source = document.getElementById("videoSource");
 
-  source.src = videoSrc;
-  video.load(); // 새 source를 적용하려면 load() 필수
-</script>
-<script src="/js/all_year.js"></script>
-<script type="module" src="/module/header.html"></script>
-<script>
-  const yearParam = new URLSearchParams(window.location.search).get("year");
-  const interval = setInterval(() => {
-    const el = document.getElementById("exhition");
-    if (el && yearParam) {
-      el.textContent = `Exhibition ${yearParam}`;
-      clearInterval(interval); // 딱 한 번만 실행
-    }
-  }, 100);
-</script>
+    source.src = videoSrc;
+    video.load(); // 새 source를 적용하려면 load() 필수
+  </script>
+  <script src="/js/all_year.js"></script>
+  <script type="module" src="/module/header.html"></script>
+  <script>
+    const yearParam = new URLSearchParams(window.location.search).get("year");
+    const interval = setInterval(() => {
+      const el = document.getElementById("exhition");
+      if (el && yearParam) {
+        el.textContent = `Exhibition ${yearParam}`;
+        clearInterval(interval); // 딱 한 번만 실행
+      }
+    }, 100);
+  </script>
 </body>
+
 </html>
