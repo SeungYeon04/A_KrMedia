@@ -204,7 +204,14 @@ h1.project-title {
     box-sizing: border-box;
     display: block;
 }
-
+.thumb-link .designer-name {
+  display: block; /* 텍스트가 새 줄에 표시되도록 블록 요소로 설정 */
+  margin-top: 8px; /* 이미지와의 간격 조절 */
+  font-size: 15px; /* 글자 크기 조절 */
+  color: white; /* 글자 색상 (기존 body에서 상속되지만 명시적으로 설정) */
+  text-align: center; /* 가운데 정렬 */
+  text-decoration: none; /* 링크 밑줄 제거 (a 태그 안에 있으므로) */
+}
 /* ========================================= */
 /* 댓글 섹션 (기존 CSS 유지) */
 /* ========================================= */
@@ -548,6 +555,7 @@ h1.project-title {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  flex-direction: column; /* 이미지와 텍스트를 세로로 정렬 */
 }
 
 /* 썸네일 이미지 */

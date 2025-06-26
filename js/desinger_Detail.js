@@ -203,21 +203,27 @@ fetch(`/data/${year}.json`)
     };
 
     // 썸네일 4개 (앞 2명, 뒤 2명)
-    const thumbWrap = document.getElementById("designerThumbs");
-    [-2, -1, 1, 2].forEach(offset => {
-      const index = (currentIndex + offset + designers.length) % designers.length;
-      const d = designers[index];
+const thumbWrap = document.getElementById("designerThumbs");
+[-2, -1, 1, 2].forEach(offset => {
+  const index = (currentIndex + offset + designers.length) % designers.length;
+  const d = designers[index];
 
-      const a = document.createElement("a");
-      a.href = `/view/designerDetail.html?year=${year}&id=${encodeURIComponent(d.name)}`;
-      a.classList.add("thumb-link"); // ✅ CSS로만 스타일
+  const a = document.createElement("a");
+  a.href = `/view/designerDetail.html?year=${year}&id=${encodeURIComponent(d.name)}`;
+  a.classList.add("thumb-link"); // ✅ CSS로만 스타일
 
-      const img = document.createElement("img");
-      img.src = getImgUrl(d.name);
-      img.alt = d.name;
-      img.classList.add("thumb-img"); // ✅ CSS로만 스타일
+  const img = document.createElement("img");
+  img.src = getImgUrl(d.name);
+  img.alt = d.name;
+  img.classList.add("thumb-img"); // ✅ CSS로만 스타일
 
-      a.appendChild(img);
-      thumbWrap.appendChild(a);
-    });
+  // 🔷 이름(텍스트) 추가
+  const nameSpan = document.createElement("span"); // 이름을 담을 span 태그 생성
+  nameSpan.classList.add("designer-name"); // 스타일링을 위한 클래스 추가
+  nameSpan.textContent = d.name; // 디자이너 이름 설정
+
+  a.appendChild(img);
+  a.appendChild(nameSpan); // 이미지를 추가한 뒤 이름(span) 추가
+  thumbWrap.appendChild(a);
+});
   });

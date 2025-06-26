@@ -27,16 +27,14 @@ html, body {
 #project-list,
 .tab-panel.active {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* 화면이 좁아지면 자동으로 열 개수를 조절하되, 한 칸의 최소 너비를 더 작게 허용 */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 150px 정도로 최소 너비 조정 */
   gap: 40px;
-  /* 🔷 제거: max-width, padding, margin을 body로 이동했으므로 여기서는 필요 없습니다. */
-  /* max-width: 1280px; */
-  /* padding: 0 40px; */
-  /* margin: 0 auto; */
   justify-items: center;
   align-items: start;
-  width: 100%; /* 부모 요소의 전체 너비를 사용하도록 설정 */
+  width: 100%;
 }
+
 
 /* 개별 그리드 아이템 */
 .grid-item {
