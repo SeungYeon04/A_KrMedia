@@ -15,16 +15,17 @@
 </head>
 <style>
   .menu-overlay {
-  position: absolute;
-  top: 50%;
-  left: 30%; /* 왼쪽으로 약간 이동 */
-  transform: translateY(-50%);
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: flex-start;
-}
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    /* 왼쪽으로 약간 이동 */
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
 
 .menu-overlay button {
   background: none;
@@ -53,8 +54,8 @@
       <source id="videoSource" type="video/mp4">
       브라우저가 비디오 태그를 지원하지 않습니다.
     </video>
-</div>
-<div class="menu-overlay">
+  </div>
+  <div class="menu-overlay">
     <button onclick="goTo('Works.html')">Works</button>
     <button onclick="goTo('designer.html')">Designer</button>
     <button onclick="goTo('ThanksTo.html')">Thanks To</button>
@@ -76,21 +77,21 @@
     const video = document.getElementById("yearVideo");
     const source = document.getElementById("videoSource");
 
-  source.src = videoSrc;
-  video.load(); // 새 source를 적용하려면 load() 필수
-</script>
-<script src="/js/all_year.js"></script>
-<script type="module" src="/module/header.html"></script>
-<script>
-  const yearParam = new URLSearchParams(window.location.search).get("year");
-  const interval = setInterval(() => {
-    const el = document.getElementById("exhition");
-    if (el && yearParam) {
-      el.textContent = `Exhibition ${yearParam}`;
-      clearInterval(interval); // 딱 한 번만 실행
-    }
-  }, 100);
-</script>
+    source.src = videoSrc;
+    video.load(); // 새 source를 적용하려면 load() 필수
+  </script>
+  <script src="/js/all_year.js"></script>
+  <script type="module" src="/module/header.html"></script>
+  <script>
+    const yearParam = new URLSearchParams(window.location.search).get("year");
+    const interval = setInterval(() => {
+      const el = document.getElementById("exhition");
+      if (el && yearParam) {
+        el.textContent = `Exhibition ${yearParam}`;
+        clearInterval(interval); // 딱 한 번만 실행
+      }
+    }, 100);
+  </script>
 </body>
 
 </html>
