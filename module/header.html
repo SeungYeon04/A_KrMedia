@@ -1,72 +1,7 @@
 <script>
   const params = new URLSearchParams(window.location.search);
-  const year = params.get("year");
+  window.year = params.get("year");
 </script>
-<style>
-  .header {
-    transition: background-color 0.4s ease, color 0.4s ease;
-    box-shadow: 0 2px 10px rgba(150, 150, 150, 0.25);
-  }
-
-  .header ul {
-    cursor: pointer;
-    letter-spacing: 10px;
-
-  }
-
-  .header.scrolled {
-    background-color: #111;
-    color: white;
-    box-shadow: 0 2px 10px rgba(150, 150, 150, 0.25);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .header.scrolled a,
-  .header.scrolled .logo {
-    color: rgb(187, 187, 187);
-    transition: color 0.3s ease;
-  }
-
-  .header a,
-  .logo {
-    transition: color 0.4s ease;
-  }
-
-  .nav a.active-nav {
-    display: inline-block;
-    position: relative;
-    font-weight: 700;
-    color: black;
-  }
-
-  .header.scrolled .nav a.active-nav {
-    color: white;
-  }
-
-  
-  .nav a.active-nav::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 4px;
-    background-color: #ff6363;
-    position: absolute;
-    bottom: 1px;
-    /* ✅ padding 안에서 처리 */
-    left: 0;
-    animation: underlineGrow 0.5s ease forwards;
-  }
-
-  @keyframes underlineGrow {
-    from {
-      width: 0;
-    }
-
-    to {
-      width: 100%;
-    }
-  }
-</style>
 <link rel="stylesheet" href="/css/all_fonts.css">
 <header class="header">
   <div class="selectYear">
@@ -95,9 +30,9 @@
         <li class="dropdown">
           <a onclick="goTo('Works.html')">Works</a>
           <ul class="dropdown-menu">
-            <li><a onclick="window.location.href = `Works.html?year=${2025}&tab=post`">포스터</a></li>
-            <li><a onclick="window.location.href = `Works.html?year=${2025}&tab=video`">비디오</a></li>
-            <li><a onclick="window.location.href = `Works.html?year=${2025}&tab=team`">팀</a></li>
+            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=post`">포스터</a></li>
+            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=video`">비디오</a></li>
+            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=team`">팀</a></li>
           </ul>
         </li>
         <li><a onclick="goTo('designer.html')">Designer</a></li>
@@ -108,10 +43,7 @@
 </header>
 <script src="/js/all_year.js"></script>
 <script>
-
   requestAnimationFrame(() => {
-    const params = new URLSearchParams(window.location.search);
-    const year = params.get("year");
     const exhibitionEl = document.getElementById('exhition');
     if (year && exhibitionEl) {
       exhibitionEl.innerHTML = `Exhibition ${year}`;

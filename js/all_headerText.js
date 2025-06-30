@@ -4,7 +4,7 @@ fetch("/module/header.html")
     document.getElementById("header-md").innerHTML = data;
     requestAnimationFrame(() => {
       const params = new URLSearchParams(window.location.search);
-      const year = params.get("year");
+      window.year = params.get("year");
       if (year) {
         const sp = document.getElementById("exhition");
         const buttons = document.querySelectorAll(".year-selector button");
@@ -12,6 +12,10 @@ fetch("/module/header.html")
           if (btn.textContent === year) {
             btn.style.color = "#ff6363";
             btn.style.fontWeight = "bold";
+            btn.style.fontSize = "15px";
+          }else{
+            btn.style.fontWeight = "normal";
+            btn.style.fontSize = "13px";
           }
         });
         const count = parseInt(year) - 1999;

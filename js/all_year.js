@@ -1,10 +1,6 @@
 function goTo(page) {
   const params = new URLSearchParams(window.location.search); // ← 이 줄 추가
-  const year = params.get("year");
-  if (!year) {
-    alert("요!");
-    return;
-  }
+  window.year = params.get("year");
   window.location.href = page + `?year=${year}`;
 }
 function goToYear(year) {
