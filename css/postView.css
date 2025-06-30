@@ -4,9 +4,11 @@
   height: auto;
   display: block;
   margin: 0 auto;
-
+  
 }
-
+body , html{
+  min-width: 408px;
+}
 .nav a.active-nav::after {
   bottom: -4px !important;
 }

@@ -1,3 +1,8 @@
+body,html{
+  min-width: 408px;
+}
+
+
 /* 슬라이더 이미지 */
 .project-main-img {
   opacity: 0;

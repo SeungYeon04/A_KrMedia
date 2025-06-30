@@ -6,12 +6,7 @@ html, body {
   flex-direction: column;
   background-color: black;
   color: white;
-
-  /* 🔷 추가: body에 전체 페이지의 최대 너비를 설정합니다. */
-  /* 이렇게 하면 모든 콘텐츠가 이 너비 안에서 중앙 정렬됩니다. */
-  max-width: 1280px; /* 원하는 최대 너비로 설정 */
-  margin: 0 auto; /* 중앙 정렬 */
-  padding: 0 40px; /* 좌우 여백 추가 (필요에 따라 조절) */
+  padding: 0 15px; /* 좌우 여백 추가 (필요에 따라 조절) */
 }
 
 /* 메인 컨텐츠 영역 */
@@ -36,10 +31,12 @@ html, body {
 }
 
 
+
 /* 개별 그리드 아이템 */
 .grid-item {
   width: 100%;
   max-width: 240px; /* 개별 아이템의 최대 너비를 유지합니다. */
+  min-width: 240px;
   text-align: center;
   color: white;
   text-decoration: none;
@@ -65,7 +62,7 @@ html, body {
 
 .designer-img-wrap img {
   width: 100%;
-  min-height: 260px;
+  min-height: 253px;
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
@@ -175,5 +172,26 @@ html, body {
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+/* 🔽 화면이 1440px 이하일 때만 너비 제한 */
+@media (max-width: 1440px) {
+  html , body {
+    max-width: 1280px;
+    margin: 0 auto;
+    min-width: 410px;
+  }
+}
+@media(max-width: 360px) {
+  html,body{
+    padding: 0px 0px;
+  }
+}@media (max-width: 768px) {
+  html, body {
+    margin: 0 !important;
+    padding: 60px 0px !important
+  }
+  #project-list, .tab-panel.active {
+    gap: 20px;;
   }
 }

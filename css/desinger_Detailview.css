@@ -86,6 +86,12 @@ body {
     .profile-role { 
         margin: auto;
     }    
+    #nameInput{
+        width: 50% !important;
+    }
+    .designer-navigation{
+        max-width: 90% !important;
+    }
 }
 
 .profile-email {

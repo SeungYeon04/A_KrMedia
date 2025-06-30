@@ -16,6 +16,11 @@ margin-bottom: 10px;
     flex: 1; /* p 요소가 남은 공간을 모두 차지하도록 */
     text-align: left; /* 텍스트 왼쪽 정렬 */
 }
+@media (max-width: 1440px) {
+   body{
+        min-width: 1060px;
+    }
+}
 
 /* 모바일 스타일 */
 @media (max-width: 768px) {
@@ -30,3 +35,84 @@ margin-bottom: 10px;
         text-align: left; /* 텍스트 왼쪽 정렬 */
     }
 }
+@media(max-width:600px){
+    html,body ,div.hero{
+        padding: 0px 15px !important;
+        text-align: left !important;
+    }
+}
+@media (max-width: 768px) {
+  html ,body{
+    font-size: 15px;
+    padding: 0 5%;
+    padding-top: 60px !important;
+  }
+.section.fade-in.active{
+    padding: 0px 15px !important;
+}
+  .hero {
+    padding: 0 5%;
+  }
+
+  .hero-title,
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .hero-subscript {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 700;
+  }
+
+  .section-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: justify; /* 🔍 양쪽 정렬 */
+    word-break: keep-all;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 1.2em;
+  }
+
+  .desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .slide-right {
+    padding: 0 5%;
+    text-align: center;
+  }
+
+  .slide-right h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .label {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  .bottom-info {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .year-nav a {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 430px) {
+    body,html{
+        min-width: 420px;
+        padding: 0px 10px !important;
+        padding-top: 60px !important;
+    };
+  }

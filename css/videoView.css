@@ -4,7 +4,9 @@
   margin: 0 auto;
   margin-bottom: 30px;
 }
-
+body,html{
+  min-width: 408px;
+}
 .project-section-image {
   padding: 0px 15%;
 }

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
-   <link rel="stylesheet" href="/css/all_fonts.css">
   <title>한국영상대학교 영상디자인과 졸업전시</title>
+  <link rel="stylesheet" href="/css/all_fonts.css">
 
   <style>
     * {
@@ -33,9 +34,19 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      opacity: 0;
-      transition: opacity 1s ease;
       z-index: 0;
+    }
+
+    #bgOverlay video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.5s ease;
     }
 
     .year-container {
@@ -58,90 +69,101 @@
       color: white;
     }
 
+    .bottom-text {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.6);
+      z-index: 2;
+      text-align: center;
+      white-space: normal;
+    }
+
     @media (max-width: 768px) {
-    .year-container {
+      .year-container {
         flex-direction: column;
         gap: 20px;
         align-items: center;
-    }
+      }
 
-    .year {
-        font-size: 2rem; /* 모바일에서는 좀 더 작게 */
-    }
-}
+      .year {
+        font-size: 2rem;
+      }
 
+      .bottom-text {
+        font-size: 0.9rem;
+      }
+    }
   </style>
-  <script>
-  // year list 모듈 삽입
-  fetch("/module/yearlist.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("yearlist-md").innerHTML = data;
-
-      // 모듈 내 year 엘리먼트에 이벤트 재등록
-      const years = document.querySelectorAll('.year');
-      const bgOverlay = document.getElementById('bgOverlay');
-
-      years.forEach(year => {
-        year.addEventListener('mouseenter', () => {
-          const bg = year.getAttribute('data-bg');
-          bgOverlay.style.backgroundImage = `url('${bg}')`;
-          bgOverlay.style.opacity = '0.5';
-        });
-
-        year.addEventListener('mouseleave', () => {
-          bgOverlay.style.opacity = '0';
-        });
-      });
-    });
-</script>
 </head>
+
 <body>
 
-  <div class="bg-overlay" id="bgOverlay"></div>
+  <!-- 🔴 비디오 오버레이 및 영상 -->
+  <div class="bg-overlay" id="bgOverlay">
+    <video id="bgVideo" type="video/mp4" src="/video/2025.mp4" muted autoplay loop playsinline></video>
+  </div>
 
+  <!-- 🔵 연도 목록 모듈 삽입 영역 -->
   <div id="yearlist-md"></div>
 
-  <div class="bottom-text">한국영상대학교 영상디자인과 졸업작품 전시회<br>Exhibition of Graduation Projects from the Department of Film Design at Korea National University of Arts</div>
+  <!-- 하단 설명 -->
+  <div class="bottom-text">
+    한국영상대학교 영상디자인과 졸업작품 전시회<br>
+    Exhibition of Graduation Projects from the Department of Film Design at Korea National University of Arts
+  </div>
 
+  <!-- 🟡 연도 리스트 + 영상 로딩 스크립트 -->
   <script>
-    const years = document.querySelectorAll('.year');
-    const bgOverlay = document.getElementById('bgOverlay');
+    const bgVideo = document.getElementById("bgVideo");
+    bgVideo.src = "/video/2025.mp4";  // ✅ 초기 기본값
+    bgVideo.load();
+    bgVideo.play().catch(() => { });
+    bgVideo.currentTime = 15.5;
+    bgVideo.style.opacity = '0.5';
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/module/yearlist.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("yearlist-md").innerHTML = data;
 
-    years.forEach(year => {
-      year.addEventListener('mouseenter', () => {
-        const bg = year.getAttribute('data-bg');
-        bgOverlay.style.backgroundImage = `url('${bg}')`;
-        bgOverlay.style.opacity = '0.5';
-      });
+          const bgVideo = document.getElementById("bgVideo");
+          let currentPlayingYear = null; // 🔴 현재 재생 중인 연도
 
-      year.addEventListener('mouseleave', () => {
-        bgOverlay.style.opacity = '0';
-      });
+          document.querySelectorAll('.year').forEach(year => {
+            year.addEventListener('mouseenter', () => {
+              const yearValue = year.textContent.trim() || '2025';
+
+              if (yearValue === '2024') return;
+              // 🔒 이미 재생 중이면 중단
+              if (currentPlayingYear === yearValue) return;
+              
+              currentPlayingYear = yearValue;
+              
+              bgVideo.src = `/video/${yearValue}.mp4`;
+              bgVideo.load();
+
+              bgVideo.onloadedmetadata = () => {
+                if (yearValue === '2025') {
+                  bgVideo.currentTime = 15.5; // ✅ 메타데이터 로드 후 설정해야 작동함
+                }
+                bgVideo.play().catch(() => {});
+                bgVideo.style.opacity = '0.5';
+              };
+            });
+            // 클릭 시 페이지 이동
+            year.addEventListener('click', () => {
+              window.location.href = `/view/intro.html?year=${year.textContent.trim()}`;
+            });
+          });
+        });
     });
-
-    function selectYear(year) {
-        const params = new URLSearchParams(window.location.search);
-        const year=params.get("year");
-        window.location.href = `view/intro.html?year=${year}`;
-    }
   </script>
-    <style>
-        .bottom-text {
-            position: absolute;
-            bottom: 5%; /* 화면 아래에서 5% 띄움 */
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 10%; /* 화면 너비 기준 글자 크기 */
-            color: rgba(255, 255, 255, 0.6);
-            z-index: 2;
-            white-space: nowrap;
-            text-align: center; 
-            white-space: normal; 
-        }
-    </style>
+
+  <!-- 기타 스크립트 -->
+  <script src="/js/all_year.js"></script>
 </body>
-<script src="/js/all_year.js"></script>
-<script type="module" src="/module/header.html"></script>
 
 </html>

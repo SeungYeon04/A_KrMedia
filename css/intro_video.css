@@ -1,36 +1,37 @@
-/* 전체 화면 기본 설정 */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: black;
-  overflow: hidden;
-}
+  /* 전체 화면 기본 설정 */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+  }
 
-/* 비디오를 담는 컨테이너 */
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 95vh; /* 세로비율 맞춰서 아래 푸터하면 됨 */
-  overflow: hidden;
-}
+  /* 비디오를 담는 컨테이너 */
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 95vh; /* 세로비율 맞춰서 아래 푸터하면 됨 */
+    overflow: hidden;
+  }
 
-/* 비디오 자체 */
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;     /* ✅ 가로는 화면 전체 */
-  height: 100%;
-  object-fit: cover; /* ✅ 비율 유지하며 꽉 채움 (잘리는 건 자동 처리) */
-  background-color: #000;
-  opacity: 0.3;
-}
-.footer-copyright{
-  margin-top: auto;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  text-align: center;
-  color: #aaa;
-  font-size: 0.85rem;
-}
+  /* 비디오 자체 */
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;     /* ✅ 가로는 화면 전체 */
+    height: 100%;
+    object-fit: cover; /* ✅ 비율 유지하며 꽉 채움 (잘리는 건 자동 처리) */
+    background-color: #000;
+    opacity: 0.3;
+  }
+  .footer-copyright{
+    margin-top: auto;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #aaa;
+    font-size: 0.85rem;
+  }
+

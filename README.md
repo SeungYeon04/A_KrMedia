@@ -5,12 +5,15 @@ project test url: https://jvision-test.netlify.app/
 전주 비전대 방영디 교수님의 웹 외주  
 한영대 졸업작품전 웹사이트  
 
+## 🐣 팀원 구성 
+- 개발자: 이승연, 박형석 
+
 ## ⚙️ 개발환경  
 
-• CODE: HTML CSS JavaScript   
-• DB: Cloud Storage for Firebase  
-• IDE: Visual Studio Code  
-• VCS: Github desktop   
+- CODE: HTML CSS JavaScript   
+- DB: Cloud Storage for Firebase  
+- IDE: Visual Studio Code  
+- VCS: Github desktop   
 
 ## 🕹 주요기능  
 

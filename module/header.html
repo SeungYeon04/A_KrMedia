@@ -1,52 +1,115 @@
-<script>
-  const params = new URLSearchParams(window.location.search);
-  window.year = params.get("year");
-</script>
-<link rel="stylesheet" href="/css/all_fonts.css">
-<header class="header">
-  <div class="selectYear">
-    <div class="year-selector">
-      <button onclick="goToYear(2025)">2025</button>
-      <button onclick="alert('준비중입니다!')">2024</button>
-      <button onclick="goToYear(2023)">2023</button>
-    </div>
-  </div>
-  <div>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>메뉴 테스트</title>
+    <link rel="stylesheet" href="/css/all_fonts.css" />
+    <style>
+        /* 기존 CSS */
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+        }
+        .active-nav {
+            font-weight: bold;
+        }
+        .scrolled {
+            background-color: rgba(0,0,0,0.1);
+        }
 
-  </div>
-  <div class="inner">
-    <h1 class="logo">
-      <a href="/index.html">
-        한국영상대학교 영상디자인과<br>
-        <span id="exhibition-info"></span>
-      </a>
-    </h1>
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <nav class="nav">
-      <ul>
-        <li><a id="exhition" onclick="goTo('intro.html')"></a></li>
-        <li><a onclick="goTo('about.html')">About</a></li>
-        <li class="dropdown">
-          <a onclick="goTo('Works.html')">Works</a>
-          <ul class="dropdown-menu">
-            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=post`">포스터</a></li>
-            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=video`">비디오</a></li>
-            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=team`">TVCF(팀)</a></li>
-          </ul>
-        </li>
-        <li><a onclick="goTo('designer.html')">Designer</a></li>
-        <li><a onclick="goTo('ThanksTo.html')">Thanks to</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<script src="/js/all_year.js"></script>
-<script>
-  requestAnimationFrame(() => {
-    const exhibitionEl = document.getElementById('exhition');
-    if (year && exhibitionEl) {
-      exhibitionEl.innerHTML = `Exhibition ${year}`;
-    }
-  });
-</script>
+        /* 새로 추가된 X 버튼 스타일 (예시) */
+        .menu-close-btn {
+            display: none; /* 기본적으로 숨김 */
+            position: absolute; /* 메뉴 내부에서 위치 조정 */
+            top: 10px; /* 적절한 위치로 조정 */
+            right: 10px; /* 적절한 위치로 조정 */
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff; /* 버튼 색상 */
+            z-index: 1001; /* 메뉴 내용 위에 오도록 */
+            padding: 0; /* 패딩 제거 */
+            line-height: 1; /* 높이 조정 */
+        }
+
+        /* 메뉴가 열렸을 때 (체크박스 체크 시) X 버튼 보이기 */
+        #menu-toggle:checked ~ .nav .menu-close-btn {
+            display: block;
+        }
+
+        /* 메뉴 자체의 위치 및 전환 효과 (예시) */
+        .nav {
+            /* 실제 메뉴가 화면 밖으로 나가있다가 들어오는 애니메이션을 위한 스타일 */
+            position: fixed !important; /* 또는 absolute */
+            top: 0!important;
+            right: 0!important;
+            width: 100%!important; /* 메뉴의 너비 */
+            height: 100%!important;
+            background-color: rgba(0,0,0,0.8)!important; /* 메뉴 배경색 */
+            transform: translateX(100%); /* 기본적으로 오른쪽 화면 밖으로 이동 */
+            transition: transform 0.3s ease-out; /* 애니메이션 효과 */
+            z-index: 1000;
+        }
+
+        #menu-toggle:checked ~ .nav {
+            transform: translateX(0); /* 체크되면 원래 위치로 */
+        }
+    </style>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        window.year = params.get("year");
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="selectYear">
+            <div class="year-selector">
+                <button onclick="goToYear(2025)">2025</button>
+                <button onclick="alert('준비중입니다!')">2024</button>
+                <button onclick="goToYear(2023)">2023</button>
+            </div>
+        </div>
+
+        <div class="inner">
+            <h1 class="logo">
+                <a href="/index.html">
+                    한국영상대학교 영상디자인과<br>
+                    <span id="exhibition-info"></span>
+                </a>
+            </h1>
+
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+            <nav class="nav">
+                <button class="menu-close-btn"></button> <ul>
+                    <li><a id="exhibition" onclick="goTo('intro.html')"></a></li>
+                    <li><a onclick="goTo('about.html')">About</a></li>
+                    <li class="dropdown">
+                        <a onclick="goTo('Works.html')">Works</a>
+                        <ul class="dropdown-menu">
+                            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=post`">포스터</a></li>
+                            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=video`">비디오</a></li>
+                            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=team`">TVCF(팀)</a></li>
+                        </ul>
+                    </li>
+                    <li><a onclick="goTo('designer.html')">Designer</a></li>
+                    <li><a onclick="goTo('ThanksTo.html')">Thanks to</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        requestAnimationFrame(() => {
+            const exhibitionEl = document.getElementById('exhibition');
+            if (year && exhibitionEl) {
+                exhibitionEl.innerHTML = `Exhibition ${year}`;
+            }
+        });
+    </script>
+
+    <script src="/js/all_year.js"></script>
+</body>
+</html>
