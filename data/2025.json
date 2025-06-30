@@ -347,7 +347,7 @@
       "profileEmail": "lsm4490@naver.com",
       "profileDream": "LEE SU MIN",
       "videoFile": "32.png",
-      "vidioName": "복원복권",
+      "vidioName": "복원복권 (Scratch to Restore)",
       "teamWork": "",
       "teamWorkEng": "",
       "teamProjectThum": "32.jpg"
@@ -356,7 +356,7 @@
       "name": "이예지",
       "profileComment": "",
       "profileEmail": "lee56046@naver.com",
-      "profileDream": "LEE By my side",
+      "profileDream": "LEE YE JI",
       "videoFile": "33.png",
       "vidioName": "",
       "teamWork": "",
@@ -524,8 +524,8 @@
       "client": "Post-it",
       "clientDescription": "말로 전하긴 어려운 감정을 조용히 붙여두는 순간이 있습니다.<br/>포스트잇은 단순한 메모지를 넘어, 누군가에게는 진심을 전하는 방식이 될 수 있습니다.<br/>이 광고는 친구 사이의 서툰 감정을붙이지 못한 말로 표현하며, 포스트잇이 감정을 담는 종이라는 메시지를 담고자 했습니다.",
       "subDescription": "교실 한켠, 사람흠 위에 놓인 포스트잇과 노트, 닫힌 사람흠 문에 조용히 붙은 손글씨 쪽지가 등장합니다. <br/>문 너머로 스며드는 햇살과 함께, 게시판과 책상 위 일상적 오브젝트들에 교실 특유의 정서를 보여주며,<br/>직접 전하지 못한 감정이 포스트잇을 통해 조용히 전달되는 순간을 표현했습니다.",
-      "posterFile": "PosterSorce/01.jpg",
-      "posterThumb": "PosterSorce/02.jpg"
+      "posterFile": "PosterSorce/01.png",
+      "posterThumb": "PosterSorce/01.png"
     },
     {
       "id": "4",
@@ -544,8 +544,8 @@
       "client": "세종시 문화광광 재단",
       "clientDescription": "세종보헤미안페스티벌은 세종시의 유령도시 이미지를 탈피하고<br/>다양한 악기로 예술적 자유와 에너지를 표현하는 문화축제입니다.",
       "subDescription": "세종 마스코트 ‘충녕’을 중심으로 다국적 캐릭터들이 어우러져<br/>자유롭고 활기찬 분위기로 글로벌 음악 축제의 에너지를 전합니다.",
-      "posterFile": "PosterSorce/01.png",
-      "posterThumb": "PosterSorce/02.png"
+      "posterFile": "PosterSorce/01.jpg",
+      "posterThumb": "PosterSorce/01.jpg"
     },
     {
       "id": "6",
@@ -554,13 +554,13 @@
       "client": "LEGO_",
       "clientDescription": "뉴턴은 사과로 중력을, 잡스는 애플로 혁신을 만들었습니다.<br/>이를 레고 블록 사과로 재해석한 작품은, 상상력과 창의력의 가능성을 전합니다.",
       "subDescription": "조명 아래 놓인 레고 사과와 ‘YOU’ 명패는, 당신이 변화를 만드는 주인공임을 말합니다.<br/>사과는 혁신을, 레고는 무한한 가능성을 상징합니다.",
-      "posterFile": "PosterSorce/03.png",
-      "posterThumb": "PosterSorce/04.png"
+      "posterFile": "PosterSorce/02.jpg",
+      "posterThumb": "PosterSorce/02.jpg"
     },
     {
       "id": "7",
       "designerName": "김영민",
-      "postName": "내집처럼 편한 Jeep",
+      "postName": "내 집처럼 편한 Jeep",
       "client": "Jeep",
       "clientDescription": "Jeep는 오프로드의 대명사로 잘 알려진 브랜드입니다.<br/>강력한 성능과 함께 내부의 안락함도 강조하기 위해, 'Jeep'와 '집'의 발음을 활용한 언어유희로 이를 표현했습니다.<br/>Jeep가 단순히 거친 길만을 달리는 브랜드가 아닌<br/>일상과 모험을 모두 품을 수 있는 브랜드임을 표현하고자 했습니다.",
       "subDescription": "외부는 별빛 아래에 거친 자연을 사용해 Jeep의 모험적이고 자유로운 브랜드 이미지를 강조하고<br/> 내부에는 따뜻한 조명이 있는 거실로 대비를 이루며 <br/>‘내 집처럼 편안한 공간’<br/>이라는 감성을 시각적으로 전달했습니다. <br/>Jeep가 단순히 이동 수단이 아닌, 어디서든 안락함을 제공하는 '모바일 리빙룸' 같은 존재임을 표현했습니다.",
@@ -604,8 +604,8 @@
       "client": "ASICS",
       "clientDescription": "피부처럼 밀착되고 공기처럼 가벼운 착용감이 특 징인 아식스 GEL-DYNABLAST.<br/>신발을 신지 않은 듯한 편안함과 자유로운 움직임을 시각적 으로 전달하고자 하였습니다",
       "subDescription": "신발을 신고 걷고 있지만, 바닥에는 신발 자국이 아닌 맨발 자국만 남도록 연출하였습니다.<br/>'안 신 은 듯한' 편안함과 공기처럼 가벼운 GEL-DY-NABLAST의 착용감을 시각적으로 표현했습니다.<br/>신발의 존재를 최소화하고, 발걸음의 흔적만 으로 제품의 편안함과 가벼움을 강조했습니다.",
-      "posterFile": "PosterSorce/01.png",
-      "posterThumb": "PosterSorce/01.png"
+      "posterFile": "PosterSorce/02.jpg",
+      "posterThumb": "PosterSorce/02.jpg"
     },
     {
       "id": "12",
@@ -614,16 +614,16 @@
       "client": "RADIOoooo",
       "clientDescription": "RADIOoooo는 음악을 통해 시간과 공간을 넘나 드는 감정을 경험할 수 있는 여행 앱입니다.<br/>사용 자가 시대와 장소를 선택해 음악을 감상하는 순간 을 표현하였습니다.",
       "subDescription": "카세트 테이프 캐릭터가 턴테이블 위 지구를 디제 잉하며, 각 나라를 짚는 동작으로 라디오 앱의 음악 재생 방식을 시각적으로 표현했습니다.<br/>장소와 시대를 선택해 음악을 감상하는 구조를 직관적이고 상징적인 장면으로 구현하고자 하였습니다.",
-      "posterFile": "PosterSorce/02.jpg",
-      "posterThumb": "PosterSorce/02.jpg"
+      "posterFile": "PosterSorce/01.png",
+      "posterThumb": "PosterSorce/01.png"
     },
     {
       "id": "13",
       "designerName": "김우림",
       "postName": "나만의 사운드를 찾다",
       "client": "SoundCloud",
-      "clientDescription": "'발굴'이라는 행위를 통해 아직 세상에 널리 알려 지지 않았거나, 시간 속에 잊힌 음악을 직접 찾아 내는 순간을 나타낸 포스터입니다.<br/>사운드 클라 우드는 이와 같은 수많은 음악들의 보관소이며, 탐험적인 브랜드 이미지를 시각적으로 구현하고 자 했습니다.",
-      "subDescription": "작은 손전등 아래, 흙 속에 드러난 낡은 음반을 통하여 나만의 사운드를 '발굴'하는 현장을 연출 하고자 했습니다.<br/>또한 상단에는 사운드클라우드 홈페이지 QR 코드를 불투명하게 배치하여<br/>관람자 스스로 '발견'할 수 있는 요소를 더해 참여형 포스터를 제작하였습니다",
+      "clientDescription": "'발굴'이라는 행위를 통해 아직 세상에 널리 알려지지 않았거나, 시간 속에 잊힌 음악을 직접 찾아내는 순간을 나타낸 포스터입니다.<br/>사운드클라우드는 이와 같은 수많은 음악의 보관소이며, 탐험적인 브랜드 이미지를 시각적으로 구현하고자 했습니다.",
+      "subDescription": "작은 손전등 아래, 흙 속에 드러난 낡은 음반을 통해 나만의 사운드를 '발굴'하는 현장을 연출하고자 했습니다.<br/>또한 상단에는 사운드클라우드 홈페이지 QR 코드를 불투명하게 배치하며<br/>관람자 스스로 '발견'할 수 있는 요소를 더한 참여형 포스터를 제작하였습니다 .",
       "posterFile": "PosterSorce/01.png",
       "posterThumb": "PosterSorce/02.png"
     },
@@ -632,8 +632,8 @@
       "designerName": "김채원",
       "postName": "졸음, 눈과생명을 가리는 도구",
       "client": "한국교통안전공단 / 경찰청",
-      "clientDescription": "수면용 안대를 착용하고 운전하는 운전자의 모습은 졸음운전이 곧 시야와 통제력을 포기 한 채 생명을 위협하는 행위임을 상징합니다.<br/>일상의 피로가 사고로 이어지는 순간을 시각 적으로 전달하여 졸음운전에 대한 경각심을 직관적으로 드러내고자 하였습니다.",
-      "subDescription": "'잠'과 '운전'이라는 상반된 두 행위를 하나의 장면에 표현함으로써,<br/>수면용 안대를 착용한 운전자는 자는 상태에서 운전하고 있다는 비 이성적인 상황을 드러냈습니다.<br/>이는 졸음운 전이 곧 시야와 의식을 잃은 채 생명을 위협하는<br/>무의식적 질주임을 시각적으로 압축해 강조하였습니다.",
+      "clientDescription": "수면용 안대를 착용하고 운전하는 운전자의 모습은 졸음운전이 곧 시야와 통제력을 포기한 채 생명을 위협하는 행위임을 상징합니다.<br/>일상의 피로가 사고로 이어지는 순간을 시각 적으로 전달하여 졸음운전에 대한 경각심을 직관적으로 드러내고자 하였습니다.",
+      "subDescription": "'잠'과 '운전'이라는 상반된 두 행위를 하나의 장면에 표현함으로써,<br/>수면용 안대를 착용한 운전자는 자는 상태에서 운전하고 있다는 비 이성적인 상황을 드러냈습니다.<br/>이는 졸음운전이 곧 시야와 의식을 잃은 채 생명을 위협하는<br/>무의식적 질주임을 시각적으로 압축해 강조하였습니다.",
       "posterFile": "PosterSorce/01.png",
       "posterThumb": "PosterSorce/02.png"
     },
@@ -683,7 +683,7 @@
       "postName": "줄어드는 내일입니다",
       "client": "보건복지부",
       "clientDescription": "출산은 소중한 선택입니다.<br/> 그 선택이 이어질 수 있도록, 우리 사회는 함께 준비해야 합니다.<br/>미래를 지키는 일은 지금부터 시작됩니다.",
-      "subDescription": "임산부 배려석의 색이 점점 사라지는 시각정 장치를 통해,<br/>출산이라는 선택이 점점 줄어드는 현실을 은유적으로 표현하였습니다.<br/>작은 변화로 시작해 큰 내일을 지켜나가자는 메시지를 전달합니다.",
+      "subDescription": "임산부 배려석의 색이 점점 사라지는 시각적 장치를 통해<br/>출산이라는 선택이 점차 줄어드는 현실을 은유적으로 표현했습니다.<br/>작은 변화에서 시작해, 더 큰 내일을 지켜나가자는 메시지를 담았습니다.",
       "posterFile": "PosterSorce/01.jpg",
       "posterThumb": "PosterSorce/02.jpg"
     },
@@ -762,8 +762,8 @@
       "designerName": "송준영",
       "postName": "생명을 살리는 날개짓",
       "client": "대한적십자사 / kobaco",
-      "clientDescription": "혈액이 부족했던 시대는 있엇지만 넘쳤던 시대는 없었습니다.<br/>이러한 문제점이 현대 시대에도 비치기에 문제점을 파악하고 '나비효과'라는 단어를 이용하여<br/>'한 번의 헌열이 엄청난 결과로 이어질 수 있다'<br/>라는 내용을 담아 제작했습니다",
-      "subDescription": "헌혈+나비효과를 결합하여 비주얼은 나비이며<br/>나비 날개엔 헌혈 팩,몸체 부분에는 주사기,더듬이는 바늘을 이용해서 나비라는 것을 시각화하였습니다.<br/>'나비효과는'작은 날개짓이 큰 파장을 일으킨다는 의미를 가지고 있기에<br/>잔상 효과를 넣어 나비 효과라는 의미를 극대화하였습니다.",
+      "clientDescription": "혈액이 부족했던 시대는 있엇지만 넘쳤던 시대는 없었습니다.<br/>이러한 문제점이 현대 시대에도 비치기에 문제점을 파악하고 '나비효과'라는 단어를 이용하여<br/>'한 번의 헌혈이 엄청난 결과로 이어질 수 있다'<br/>라는 내용을 담아 제작했습니다",
+      "subDescription": "헌혈+나비효과를 결합하여 비주얼은 나비이며<br/>나비 날개엔 헌혈 팩,몸체 부분에는 주사기,더듬이는 바늘을 이용해서 나비라는 것을 시각화하였습니다.<br/>'나비효과'는작은 날개짓이 큰 파장을 일으킨다는 의미를 가지고 있기에<br/>잔상 효과를 넣어 나비 효과라는 의미를 극대화하였습니다.",
       "posterFile": "PosterSorce/01.png",
       "posterThumb": "PosterSorce/02.png"
     },
@@ -780,10 +780,10 @@
     {
       "id": "30",
       "designerName": "유예원",
-      "postName": "버려온 숲, 버려질 숲",
+      "postName": "내가 버린 쓰레기<br/> 내가 만든 미래",
       "client": "kobaco / 환경부",
       "clientDescription": "우리에게 가장 친근하지만 보호 문제가 심각한 소재인 <br/>'꽃과 나무,숲'<br/>등을 쓰레기로 표현해 내면 재미있지 않을까라고 생각했습니다.<br/>멀리서 보면 그저 아름다운 꽃과 나무지만 가까이 보면 쓰레기로 이루어진 숲의 모습을 표현했습니다.",
-      "subDescription": "쓰레기와 나므, 꽃 등을 합성하여 이질적이면서도 눈에 띄는 비주얼을 제작하고<br/>현재와 미래를 빗댄 헤드카피로 재미를 주었습니다.",
+      "subDescription": "쓰레기와 나무, 꽃 등을 합성하여 이질적이면서도 눈에 띄는 비주얼을 제작하고<br/>현재와 미래를 빗댄 헤드카피로 재미를 주었습니다.",
       "posterFile": "PosterSorce/01.jpg",
       "posterThumb": "PosterSorce/02.jpg"
     },
@@ -842,7 +842,7 @@
       "designerName": "이수민",
       "postName": "당신의 꿈, 이제 이륙합니다",
       "client": "하나투어",
-      "clientDescription": "창 밖에 펼쳐진 꿈같은 풍경 속에서, 우리는 어린 시절 마음속 품었던 꿈의 장소와 다시 마주합니다.<br/>누구나 한 번쯤 동경했을 법한 그 곳을 여행이라는 테마와 연결하여,<br/>여행이 단순한 이동이 아닌 , 오래된 꿈을 안고 다시 꺼내고 마침내 그 위에 닿는 특별한 순간임을 표현했습니다.",
+      "clientDescription": "창 밖에 펼쳐진 꿈같은 풍경 속에서, 우리는 어린 시절 마음속 품었던 꿈의 장소와 다시 마주합니다.<br/>누구나 한 번쯤 동경했을 법한 그 곳을 여행이라는 테마와 연결하여,<br/>여행이 단순한 이동이 아닌, 오래된 꿈을 안고 다시 꺼내고 마침내 그 위에 닿는 특별한 순간임을 표현했습니다.",
       "subDescription": "비행기 창문을 통해 바라본 드넓은 들판 위로 한 사람이 머플러를 휘날리며 열기구를 타고 하늘을 유영합니다.<br/>그 뒷모습은, 마치 어린 시절 상상 속 모험을 떠나는 아이처럼 보이며<br/>누구나 마음속에 품고 있던 장래희망을 다시 떠올리는 순간을 시각적으로 담아냅니다.",
       "posterFile": "PosterSorce/01.png",
       "posterThumb": "PosterSorce/02.png"
@@ -872,7 +872,7 @@
       "designerName": "이은광",
       "postName": "소리, 그 이상의 감각",
       "client": "Marshall",
-      "clientDescription": "인물의 신체를 음표로 재구성하여, 감정을 넘어 신체롸 몰입의 깊이에 도달하는 순간을 상징합니다.<br/>마샬의 깊이 있는 사운드에 의해 스피커와 실루엣은 일그러지고<br/> 단순히 들리는 소리를 넘어 전율을 유발하는 감각적 경험을 담고 있습니다.",
+      "clientDescription": "인물의 신체를 음표로 재구성하여, 감정을 넘어 신체와 몰입의 깊이에 도달하는 순간을 상징합니다.<br/>마샬의 깊이 있는 사운드에 의해 스피커와 실루엣은 일그러지고<br/> 단순히 들리는 소리를 넘어 전율을 유발하는 감각적 경험을 담고 있습니다.",
       "subDescription": "음표로 이루어진 연주자의 실루엣은 마샬 스피커의 강렬한 사운드에 의해 파형처럼 일그러지며 전달되는 전율을 시각적으로 표현합니다.<br/>단순히 음악을 듣는것을 넘어 , 감정을 흔드는 마샬만의 <br/>깊은 몰입감을 이미지로 형상화하였습니다.",
       "posterFile": "PosterSorce/01.png",
       "posterThumb": "PosterSorce/02.png"
@@ -910,12 +910,12 @@
     {
       "id": "43",
       "designerName": "지혜현",
-      "postName": "Synk Into Rhythm,<br/>Sink Into Music",
+      "postName": "당신만을 위한 사운드 DNA",
       "client": "Spotify",
       "clientDescription": "Spotify는 사용자의 청취 데이터를 분석해 개인화된 음악을 추천합니다.<br/> 이러한 알고리즘이 단순한 큐레이션을 넘어, 음악 취향을 통해 개인의 정체성을 형성하는 하나의 유전자처럼 작동한다는 점을 시각적으로 표현하였습니다.",
-      "subDescription": "중앙에 배치된 DNA 이중나선 구조에 로고를 자연스럽게 융합해 Spotify를 DNA의 일부로 표현함으로써<br/> 해당 어플이 개인의 음악 취향을 구성하는 핵심 역할을 수행함을 상징하였습니다.<br/>형광 그린 컬러와 어두운 배경의 대비,심도 저절을 통해 구조의 입체감과 생동감을 강조했습니다.",
-      "posterFile": "PosterSorce/01.jpg",
-      "posterThumb": "PosterSorce/02.jpg"
+      "subDescription": "중앙에 배치된 DNA 이중나선 구조에 로고를 자연스럽게 융합해 Spotify를 DNA의 일부로 표현함으로써<br/> 해당 어플이 개인의 음악 취향을 구성하는 핵심 역할을 수행함을 상징하였습니다.<br/>형광 그린 컬러와 어두운 배경의 대비,심도 조절을 통해 구조의 입체감과 생동감을 강조했습니다.",
+      "posterFile": "PosterSorce/1.jpg",
+      "posterThumb": "PosterSorce/1.jpg"
     },
     {
       "id": "44",
@@ -935,7 +935,7 @@
       "clientDescription": "파나소닉의 루믹스는 튼튼한 내구성을 자랑합니다.<br/>타사 카메라보다 튼튼함을 강조하기 위하여 설산에는 눈이 쌓이는 제품의 모습을 보여주며<br/>어디든 가져가도 잘 작동되는 든든한 모습을 전달합니다.",
       "subDescription": "눈 내리는 설산 아래 파나소닉의 루믹스 카메라가 눈에 덮여 있는 모습을 보여주며<br/>눈이 내리고 영하의 날씨에서도 든든하게 잘 작동하는 모습을 보여줍니다.<br/>이는 카메라의 신뢰할 수 있는 내구성을 표현했으며><br/>이를 통해 사용자는 어떤 환경에서도 최고의 사진과 영상을 남길 수 있도록 지원합니다.",
       "posterFile": "PosterSorce/01.jpg",
-      "posterThumb": "PosterSorce/02.jpg"
+      "posterThumb": "PosterSorce/01.jpg"
     },
     {
       "id": "46",
@@ -1031,7 +1031,7 @@
       "thumbnail": "01.jpg",
       "postName": "Smile ID",
       "client": "Apple",
-      "clientDescription": "뇌경색 초기진단 케이스스터디필름",
+      "clientDescription": "뇌경색 초기진단 케이스 스터디필름",
       "videoDescription": "Face ID를 활용해 사용자의 안면 비대칭을 감지하여 뇌졸중 초기 증상을 조기에 탐지하는 기능입니다.<br>일상 속 '스마일'을 통해 생명을 지키는 스마트 헬스케어 솔루션입니다."
     },
     {
@@ -1136,7 +1136,7 @@
       "postName": "작은 꿈의 비행",
       "client": "대한항공",
       "clientDescription": "하늘을 나는 작은 꿈, 대한항공과 함께",
-      "videoDescription": "어린 시절부터 하늘을 날고 싶어하던 아이가, 꿈에 대해 방황하고 좌절하다가<br>어린시절을 회상하며 다시한번 꿈을 향해 도전하여, 대한항공에 들어가서 하늘을 나는 꿈을 이룬다."
+      "videoDescription": "어린 시절부터 하늘을 날고 싶어하던 아이가, 꿈에 대해 방황하고 좌절하다가<br>어린시절을 회상하며 다시한번 꿈을 향해 도전하여, 대한항공에 들어가서 하늘을 나는 꿈을 이룬다.<br/>Ai만을 사용해 노래와 영상을 제작하여 누구든지 창작에 더 쉽게 다가갈 수 있는 것을 알리고 싶었습니다."
     },
     {
       "id": "1015",
@@ -1162,7 +1162,7 @@
       "postName": "당신을 기억하게 만드는 향수",
       "client": "GRANHAND",
       "clientDescription": "향기로 기억하는 게 아닌, 기억을 향기로 남기는 것",
-      "videoDescription": "그랑핸드의 향수가 스치는 순간, 누군가의 기억 속에 당신이 남습니다.자연 속 따스한 빛과 함께 퍼지는 감정의 향을 담은 브랜드 필름."
+      "videoDescription": "그랑핸드의 향수가 스치는 순간, 누군가의 기억 속에 당신이 남습니다.<br/>자연 속 따스한 빛과 함께 퍼지는 감정의 향을 담은 브랜드 필름."
     },
     {
       "id": "1019",
@@ -1179,12 +1179,12 @@
     },
     {
       "id": "1020",
-      "videoThumb": "01.jpg",
+      "videoThumb": "01.gif",
       "vimeoId": "",
       "designerName": [
         "박나영"
       ],
-      "thumbnail": "01.jpg",
+      "thumbnail": "01.gif",
       "postName": "언제 어디서나, 파파고",
       "client": "Naver",
       "clientDescription": "오프라인에서도 번역이 가능한 번역기",
@@ -1205,16 +1205,16 @@
     },
     {
       "id": "1023",
-      "videoThumb": "01.jpg",
+      "videoThumb": "01.gif",
       "vimeoId": "https://www.youtube.com/embed/PINVdRy6RHM",
       "designerName": [
         "박준희"
       ],
-      "thumbnail": "01.jpg",
+      "thumbnail": "01.gif",
       "postName": "aesop",
       "client": "aesop",
       "clientDescription": "자연, 하나가 되어,",
-      "videoDescription": "aesop 의 룸스프레이, 파도처럼 일렁이는 시더와 카다멈 스파이스가 균형을 잡아주는 시트러스 아로마의 룸스프레이. 시트러스한 우드향으로 자연과 가까워지는 느낌을 받아보세요."
+      "videoDescription": "aesop의 룸스프레이, 파도처럼 일렁이는 시더와 카다멈 스파이스가 균형을 잡아주는<br/> 시트러스 아로마의 룸스프레이.<br/>시트러스한 우드향으로 자연과 가까워지는 느낌을 받아보세요."
     },
     {
       "id": "1024",
@@ -1224,7 +1224,7 @@
         "박진선"
       ],
       "thumbnail": "01.jpg",
-      "postName": "[Shift + A] + F12",
+      "postName": "Shift + A + F12",
       "client": "Blender재단",
       "clientDescription": "창작의 즐거움.",
       "videoDescription": "캐릭터를 창작하는 주인공의 과정을 통해 창작의 즐거움과 몰입을 그려낸 3D 애니메이션 입니다"
@@ -1270,13 +1270,13 @@
     },
     {
       "id": "1029",
-      "videoThumb": "01.jpg",
+      "videoThumb": "01.gif",
       "vimeoId": "https://www.youtube.com/embed/g2k_gp0Ej5c",
       "designerName": [
         "송준영"
       ],
-      "thumbnail": "01.jpg",
-      "postName": "어디서든 이어지는 음악",
+      "thumbnail": "01.gif",
+      "postName": "하나로 연결되는 모든 음악",
       "client": "Spotify",
       "clientDescription": "언제 어디서나 스포티파이로",
       "videoDescription": "스포티파이의 강점인 Spotify Connect, 잼하기 기능을 주제로 영상을 표현합니다"
@@ -1316,9 +1316,9 @@
       ],
       "thumbnail": "01.jpg",
       "postName": "Reality, Reimagined",
-      "client": "d'strict",
+      "client": "LG",
       "clientDescription": "현실을 재구성하다",
-      "videoDescription": "전시장에서 상영되고 있는 영상이 현실세계로 튀어나올만큼 리얼한 영상을 만드는 스튜디오라는걸 보여주는 스튜디오 홍보 영상입니다."
+      "videoDescription": "LG디스플레이의 뛰어난 화질과 몰입감을 효과적으로 전달하고자 하였습니다.<br/>단독 디스플레이의 화면이 현실과 가상의 경계를 무너뜨리고 <br/>관람객이 직접 화면 속 핑크빛 꽃이 휘날리는 공간으로 들어가게 하는 연출을 통해초현실적인 체험을 제공합니다 .<br/>이를 통해 디스플레이가 현실을 새롭게 재구성한다는 메시지를 시각적으로 강조하고자 하였습니다 ."
     },
         {
       "id": "1056",
@@ -1328,8 +1328,8 @@
       "vimeoId": "https://www.youtube.com/embed/aYeG2CrGuE0",
       "postName": "CHERRY POP",
       "client": "Cocacola",
-      "clientDescription": "코카콜라 체리 맛 특유의 청량감과 감각적 경험을 짧은 순간 안에 녹여냈습니다.<br/>단순한 제품 묘사를 넘어 감정의 팽창과 해방을 액체의 흐름과<br/>시각적 리듬으로 설계함으로써 짧지만 강렬한,한 모금이 기분을 바꾸는 것을 직관적으로 표현하였습니다.",
-      "videoDescription": "코카콜라의 시원한 질감과 체리의 달콤한 맛을 시 각적으로 구현하였습니다.<br/>체리의 팽창과 폭발은 유리처럼 반짝이는 질감으로 표현하였으며,<br/>코카콜라의 시원함과 청량함은 액체의 움직임을 통해 감정이 터지고 응결되는 순간을 감각 중심의 내러티 브로 구성했습니다."
+      "clientDescription": "코카콜라 체리 맛 특유의 청량감과 감각적 경험을 짧은 순간 안에 녹여냈습니다.<br/>단순한 제품 묘사를 넘어 감정의 팽창과 해방을 액체의 흐름과<br/>시각적 리듬으로 설계함으로써 짧지만 강렬한, 한 모금이 기분을 바꾸는 것을 직관적으로 표현하였습니다.",
+      "videoDescription": "코카콜라의 시원한 질감과 체리의 달콤한 맛을 시각적으로 구현하였습니다.<br/>체리의 팽창과 폭발은 유리처럼 반짝이는 질감으로 표현하였으며,<br/>코카콜라의 시원함과 청량함은 액체의 움직임을 통해 감정이 터지고 응결되는 순간을 감각 중심의 내러티브로 구성했습니다."
     },
     {
       "id": "1034",
@@ -1352,7 +1352,7 @@
         "이예지"
       ],
       "thumbnail": "01.jpg",
-      "postName": "내 곁에",
+      "postName": "늘 곁에",
       "client": "monami",
       "clientDescription": "가장 오랫동안 내 곁에 있어준 Monami",
       "videoDescription": "일상의 차가운 순간 속, 가장 따뜻하게 곁을 지켜주는 모나미의 이야기를,<br>시간의 흐름을 따라 펼쳐지는 감성적 내러티브와 섬세한 색 보정, 조명 설계를 통해 담아낸 광고입니다."
@@ -1404,10 +1404,10 @@
         "이은광"
       ],
       "thumbnail": "01.jpg",
-      "postName": "전율(戰慄)",
+      "postName": "REIMAGINE",
       "client": " Marshall",
-      "clientDescription": "전율이 흐르는 곳",
-      "videoDescription": "ai를 이용해 감각의 흐름을 신체와 공간을 통해 시각적으로 구성한 영상입니다."
+      "clientDescription": "사운드로 공간을 변화시키다.",
+      "videoDescription": "마샬의 사운드가 정적인 공간에 변화를 일으키고<br/> 차가운 분위기를 따뜻하게 전환시켜 감각적 경험으로 시각화한 영상입니다 ."
     },
     {
       "id": "1041",
@@ -1458,8 +1458,8 @@
       "thumbnail": "01.png",
       "postName": "The Last Entry",
       "client": "EMK",
-      "clientDescription": "3D 시네마틱으로 되살아난 프랑켄슈타인의 비극",
-      "videoDescription": "폐허가 된 실험실에 남겨진 일지를 통해 제 3자의 시선에서 뮤지컬 ‘프랑켄슈타인’의 세계관과 작품의 비극적인 서사를 조명하는 3d 시네마틱 트레일러"
+      "clientDescription": "AI 시네마틱으로 되살아난 프랑켄슈타인의 비극",
+      "videoDescription": "폐허가 된 실험실에 남겨진 일지를 통해 제 3자의 시선에서 뮤지컬 ‘프랑켄슈타인’의 세계관과 작품의 비극적인 서사를 조명하는 AI 시네마틱 트레일러"
     },
     {
       "id": "1045",
@@ -1489,12 +1489,12 @@
     },
     {
       "id": "1047",
-      "videoThumb": "01.jpg",
+      "videoThumb": "01.gif",
       "vimeoId": "https://www.youtube.com/embed/iNsP47psPW8",
       "designerName": [
         "최민주"
       ],
-      "thumbnail": "01.jpg",
+      "thumbnail": "01.gif",
       "postName": "Made by You",
       "client": "Converse",
       "clientDescription": "자유로운 개성과 도전",
@@ -1515,12 +1515,12 @@
     },
     {
       "id": "1049",
-      "videoThumb": "01.jpg",
+      "videoThumb": "01.gif",
       "vimeoId": "https://www.youtube.com/embed/4jQm7I8d1IE",
       "designerName": [
         "한영"
       ],
-      "thumbnail": "01.jpg",
+      "thumbnail": "01.gif",
       "postName": "여름의 마음 우편",
       "client": "우체국 택배",
       "clientDescription": "마음을 전해드려요",
@@ -1693,7 +1693,7 @@
       "teamfolder": "아이쉐어링",
       "videoName": "헨젤링과 그레텔링",
       "teamtitle": "부모의 안심을 위한 위치추적앱",
-      "teamSubTitle": "숲속을 들어간 아이들, 유괴되고 위험에 처한 아이들의 위치를 아이쉐어링을 통해 빠르게 찾아낼수있다는 내용을 헨젤과 그레텔, 과자의 집을 사용하여 표현했습니다",
+      "teamSubTitle": "숲속을 들어간 아이들, 유괴되고 위험에 처한 아이들의 위치를 아이쉐어링을 통해 빠르게 찾아낼 수 있다는 내용을 헨젤과 그레텔, 과자의 집을 사용하여 표현했습니다",
       "teamMembers": [
         "김성원",
         "김영민",

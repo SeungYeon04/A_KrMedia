@@ -136,16 +136,21 @@ document.addEventListener("DOMContentLoaded", () => {
           };
           testImg.src = imageUrl;
 
-          title = project.data.teamtitle;
-          typeText = '팀 프로젝트';
-          projectItemDiv.classList.add('team-type');
-          projectItemDiv.onclick = () => {
-            location.href = `../view/teamView.html?year=${year}&id=${project.data.id}`;
-          };
-        }
+          const teamName = project.data.teamName || "";
+          const teamMembers = Array.isArray(project.data.teamMembers)
+              ? project.data.teamMembers.join('  , ')
+              : project.data.teamMembers || "";
+
+            title = `<span style='color:white; font-size:18px'>${teamName}</span><br/><span style='color:#cccccc'>팀원 : ${teamMembers}<span>`;
+            typeText = 'TVCF';
+            projectItemDiv.classList.add('team-type');
+            projectItemDiv.onclick = () => {
+              location.href = `../view/teamView.html?year=${year}&id=${project.data.id}`;
+            };
+          }
 
         const projectTitleDiv = document.createElement("div");
-        projectTitleDiv.innerHTML = `<strong style="font-size:20px">${typeText}</strong><br/><strong>${title}</strong>`;
+        projectTitleDiv.innerHTML = `<strong style="font-size:20px; color:#ff6666">${typeText}</strong><br/><strong style='line-height:1.5;color:whilte'>${title}</strong>`;
         projectItemDiv.appendChild(projectTitleDiv);
 
         mainProjectContainer.appendChild(projectItemDiv);

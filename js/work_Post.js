@@ -1,4 +1,4 @@
-import { getImgUrl, getUserAssetUrl , getUserAssetPostUrl } from './all_getuserImg.js';
+import { getImgUrl, getUserAssetUrl, getUserAssetPostUrl } from './all_getuserImg.js';
 window.getImgUrl = getImgUrl;
 const params = new URLSearchParams(window.location.search);
 const year = params.get("year");
@@ -6,16 +6,23 @@ const postGrid = document.getElementById("post");
 const videoGrid = document.getElementById("video");
 const teamGrid = document.getElementById("team");
 
-// 메뉴 클릭시 탭 전환
 document.querySelectorAll(".tab-button").forEach(button => {
   button.addEventListener("click", () => {
     const target = button.dataset.tab;
 
+    // 탭 클래스 전환
     document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
     document.querySelectorAll(".tab-panel").forEach(panel => panel.classList.remove("active"));
-
     button.classList.add("active");
     document.getElementById(target).classList.add("active");
+
+    // 🔄 URL 파라미터 수정: tab 값 갱신
+    const params = new URLSearchParams(window.location.search);
+    params.set("tab", target);
+
+    // URL만 바꾸고 페이지는 유지
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState({}, '', newUrl);
   });
 });
 
@@ -30,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const targetButton = document.querySelector(`.tab-button[data-tab="${selectedTab}"]`);
       const targetPanel = document.getElementById(selectedTab);
-      
+
       if (targetButton && targetPanel) {
         targetButton.classList.add("active");
         targetPanel.classList.add("active");
@@ -101,14 +108,16 @@ fetch(`/data/${year}.json`)
           const div = document.createElement('div');
           if (isFallback) div.classList.add("no-image");
           div.innerHTML = `
-            <a href="./postView.html?year=${year}&id=${encodeURIComponent(post.id)}" class="grid-item${isFallback ? " no-image" : ""}">
-              <div class="designer-img-wrap">
-                ${isFallback ? "" : `<img src="${validUrl}" class="img-responsive">`}
-              </div>
-              <h3 class="head_title"><span>${designer.name}</span></h3>
-              <h3><span style='font-size:16px'>${post.postName}</span></h3>
-            </a>
-          `;
+  <a href="./postView.html?year=${year}&id=${encodeURIComponent(post.id)}"
+     class="grid-item${isFallback ? " no-image" : ""}">
+    <div class="designer-img-wrap">
+      ${isFallback ? "" : `<img src="${validUrl}" class="img-responsive">`}
+    </div>
+    <h3 class="head_title">포스터</h3>
+    <h3><span style="font-size: 16px;">${post.postName}</span></h3>
+    <p class="kor_sub">디자이너: ${designer.name}</p>
+  </a>
+`;
           return {
             index,
             html: div.innerHTML
@@ -182,7 +191,7 @@ fetch(`/data/${year}.json`)
       });
     })();
 
-    
+
     // 파이어베이스에서 팀이름이나 클라이언트 이름으로 된 폴더를 찾는다. 
     const teamPromises = [];
     data.팀.forEach((team, index) => {
@@ -234,6 +243,3 @@ fetch(`/data/${year}.json`)
 
   });
 
-{/* <p class="eng_sub">${team.teamNameEng}</p>
-        <p class="kor_sub">팀원: ${team.teamMembers.join(", ")}</p>
-  */}
