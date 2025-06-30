@@ -3,6 +3,7 @@
 </div>
     <link rel="stylesheet" href="/css/all_fonts.css">
 <script>
-  const selectedYear = localStorage.getItem("selectedYear") || new Date().getFullYear();
-  document.getElementById("footer-year").textContent = selectedYear;
+  const params = new URLSearchParams(window.location.search);
+  const selectedYear = params.get("year") || new Date().getFullYear(); // URL에서 'year' 파라미터를 가져오거나 현재 연도를 사용
+   document.getElementById("footer-year").textContent = selectedYear;
 </script>

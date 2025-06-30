@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <title>팀 프로젝트 상세</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- post랑 디자인 통일해서 해야하나? all_view.css? -->
   <link rel="stylesheet" href="/css/postView.css">
-<!-- head 안에 삽입 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <!-- head 안에 삽입 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 
   <link rel="stylesheet" href="/css/all_header.css">
   <link rel="stylesheet" href="/css/teamView.css">
   <link rel="stylesheet" href="/css/all_fonts.css">
-
-    <style>
-
-    </style>
+  <script src="/js/all_headerText.js"></script>
 
 </head>
+
 <body>
   <div id="header-md"></div>
   <div class="work-header"></div>
@@ -28,36 +27,31 @@
 
   <div class="project-info-section">
     <h3 class="project-title"></h3>
-        <p style="font-size: 15px;" class="project-client"></p>
-        <p style="font-size: 15px;" class="project-team-names"></p>
-        <div class="project-section-text" style="font-size: 14px; line-height: 1.6;"></div>
-        <h1 class="project-description"></h1>
+    <p style="font-size: 15px;" class="project-client"></p>
+    <p style="font-size: 15px;" class="project-team-names"></p>
+    <div class="project-section-text" style="font-size: 14px; line-height: 1.6;"></div>
+    <h1 class="project-description"></h1>
   </div>
+  </div>
+  <!-- 영상 재생부문 -->
+  <div class="content-box">
+    <div class="project-video-wrap">
+      <iframe class="project-video" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+      </iframe>
     </div>
-    <!-- 영상 재생부문 -->
-    <div class="content-box">
-        <div class="project-video-wrap">
-        <iframe
-            class="project-video"
-            src=""
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen>
-        </iframe>
-        </div>
-        <p class="v-text"></p>
-    </div>  
+    <p class="v-text"></p>
+  </div>
 
 
-    <div class="content-box">
-        <h1>Storyboard</h1>
-        <div class="auto-slider" id="storyBord-slider">
-        <img class="auto-slide-img" src="" alt="스토리보드 이미지">
-         <p class="s-text"></p>
+  <div class="content-box">
+    <h1>Storyboard</h1>
+    <div class="auto-slider" id="storyBord-slider">
+      <img class="auto-slide-img" src="" alt="스토리보드 이미지">
+      <p class="s-text"></p>
     </div>
 
     <div>
-        <h1>Memorise</h1>
+      <h1>Memorise</h1>
       <div class="auto-slider" id="memoRise-slider">
         <div class="img-wrapper">
           <img class="auto-slide-img" src="" alt="메모라이즈 이미지">
@@ -65,50 +59,41 @@
         </div>
       </div>
     </div>
-            <p class="m-text"></p>
-    </div>
-    
-    <div class="content-box">
-  <h1>Members Image</h1>
-  <div class="members-img-wrap">
-    <img class="members-img" src="" alt="팀 구성원 이미지">
+    <p class="m-text"></p>
   </div>
-</div>
 
-
-    <div class="content-box">
-        <h1>Team PPM Note</h1>
-
-        <div class="ppm-carousel">
-        <button class="ppm-btn prev">❮</button>
-        <div class="ppm-image-container">
-            <img class="ppm-image" src="" alt="PPM 이미지">
-        </div>
-        <button class="ppm-btn next">❯</button>
-        </div>
-        <p class="ppt-text"></p>
+  <div class="content-box">
+    <h1>Members Image</h1>
+    <div class="members-img-wrap">
+      <img class="members-img" src="" alt="팀 구성원 이미지">
     </div>
+  </div>
 
-    <div class="content-box">
-        <h1>Designers</h1>
-        <div id="team-members-wrap" class="team-members-container"></div>
+
+  <div class="content-box">
+    <h1>Team PPM Note</h1>
+
+    <div class="ppm-carousel">
+      <button class="ppm-btn prev">❮</button>
+      <div class="ppm-image-container">
+        <img class="ppm-image" src="" alt="PPM 이미지">
+      </div>
+      <button class="ppm-btn next">❯</button>
     </div>
-    <div class="footer-copyright">
-      © 2023. DESIGNTHEHAM Co. all rights reserved.
-    </div>
+    <p class="ppt-text"></p>
+  </div>
+
+  <div class="content-box">
+    <h1>Designers</h1>
+    <div id="team-members-wrap" class="team-members-container"></div>
+  </div>
+  <div class="footer-copyright">
+    © 2023. DESIGNTHEHAM Co. all rights reserved.
+  </div>
   </footer>
 
   <script type="module" src="/js/team.js"></script>
-<script src="/js/all_year.js"></script>
-<script>
-  const yearParam = new URLSearchParams(window.location.search).get("year");
-  const interval = setInterval(() => {
-    const el = document.getElementById("exhition");
-    if (el && yearParam) {
-      el.textContent = `Exhibition ${yearParam}`;
-      clearInterval(interval); // 딱 한 번만 실행
-    }
-  }, 100);
-</script>
+  <script src="/js/all_year.js"></script>
 </body>
+
 </html>

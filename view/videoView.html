@@ -71,15 +71,5 @@
   });
   
 </script>
-<script>
-  const yearParam = new URLSearchParams(window.location.search).get("year");
-  const interval = setInterval(() => {
-    const el = document.getElementById("exhition");
-    if (el && yearParam) {
-      el.textContent = `Exhibition ${yearParam}`;
-      clearInterval(interval); // 딱 한 번만 실행
-    }
-  }, 100);
-</script>
 </body>
 </html>

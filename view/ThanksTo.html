@@ -204,16 +204,6 @@
 <script type="module" src="/js/thanksTo.js"></script>
 <script type="module" src="/module/header.html"></script>
 <script src="/js/all_year.js"></script>
-<script>
-  const yearParam = new URLSearchParams(window.location.search).get("year");
-  const interval = setInterval(() => {
-    const el = document.getElementById("exhition");
-    if (el && yearParam) {
-      el.textContent = `Exhibition ${yearParam}`;
-      clearInterval(interval); // 딱 한 번만 실행
-    }
-  }, 100);
-</script>
 </body>
 
 </html>

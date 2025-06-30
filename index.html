@@ -121,7 +121,8 @@
     });
 
     function selectYear(year) {
-        localStorage.setItem("selectedYear", year);
+        const params = new URLSearchParams(window.location.search);
+        const year=params.get("year");
         window.location.href = `view/intro.html?year=${year}`;
     }
   </script>

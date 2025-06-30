@@ -104,7 +104,6 @@
                 1999.3 '그래픽디자인과' 신설 (방송영상제작계열), 입학정원 40명</p>
             </div>
         </div>
-
         <div class="section fade-in" style="color: white;" class="fade-in">
             <h3 class="section-title">교육 목표</h3>
             <div class="section-content">
@@ -172,6 +171,12 @@
         </div>
     </div>
     </div>
-    <script type="module" src="/module/header.html"></script>
     <script src="/js/all_year.js"></script>
-    </script>
+    <script>
+        // 페이지 로드 시 슬라이드 쇼 시작
+        document.addEventListener("DOMContentLoaded", function () {
+            startSlideShow();
+        });
+
+        // 헤더 렌더링
+        document.getElementById("header-md").innerHTML = headerHTML;
