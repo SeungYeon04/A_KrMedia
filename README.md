@@ -1,5 +1,5 @@
 ## 🔗 페이지 URL 
-project test url: https://jvision-test.netlify.app/  
+url(운영중): https://kumamid.com  
 
 ## 🖥 프로젝트 소개 
 전주 비전대 방영디 교수님의 웹 외주  
