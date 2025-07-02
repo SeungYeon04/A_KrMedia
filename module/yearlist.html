@@ -1,14 +1,5 @@
-<div class="year-container">
-    <!--
-    <div class="year" data-bg="img/item01.jpg" onclick="selectYear(2025)">2025</div>
-    <div class="year" data-bg="img/bg2024.jpg" onclick="selectYear(2024)">2024</div>
-    -->
-
-    <!-- 1. 현재 이 div한 줄에서 2023이라 적힌 부분만 바꿔서 쓰시면 됩니다. 
-        2. 그리고 data -> 2023.json 데이터처럼 2025.json 내용... 방식으로 !
-        /대표이미지01.jpg  
-    -->
-    <div class="year" data-bg="/img/about/" onclick="selectYear(2025)">2025</div>
-    <div class="year" data-bg="/img/about/" >2024</div>
-    <div class="year" data-bg="/img/about/" onclick="selectYear(2023)">2023</div>
+<div class="year-container" style="flex-direction: row; align-items: center;">
+    <div class="year" data-bg="/img/about/" onclick="selectYear(2025)" style="font-weight: bold;">2025</div>
+    <div class="year" style="font-weight: 100;  font-family: Apple SD Gothic Neo; height: 53px; text-align: center;" data-bg="/img/about/" onclick="selectYear(2024)">2024</div>
+    <div class="year" style="font-weight: 100;  font-family: Apple SD Gothic Neo; height: 53px; text-align: center;" data-bg="/img/about/" onclick="selectYear(2023)">2023</div>
 </div>
