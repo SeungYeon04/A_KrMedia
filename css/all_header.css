@@ -63,9 +63,7 @@ body {
   background-color: #222;
   color: white;
 }
-header.scrolled .selectYear .year-selector button{
-  color: rgb(252, 252, 252);
-}
+
 /* DROPDOWN */
 .nav .dropdown {
   position: relative;
@@ -143,6 +141,7 @@ header.scrolled .selectYear .year-selector button{
   display: flex;
   justify-content: center;
   flex: 1;
+  margin-top: 16px;
 }
 .nav ul {
   display: flex;
@@ -174,69 +173,7 @@ header.scrolled .selectYear .year-selector button{
     width: 100%;
   }
 }
-  .header {
-    transition: background-color 0.4s ease, color 0.4s ease;
-    box-shadow: 0 2px 10px rgba(150, 150, 150, 0.25);
-  }
 
-  .header ul {
-    cursor: pointer;
-    letter-spacing: 10px;
-
-  }
-
-  .header.scrolled {
-    background-color: #111;
-    color: white;
-    box-shadow: 0 2px 10px rgba(150, 150, 150, 0.25);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .header.scrolled a,
-  .header.scrolled .logo {
-    color: rgb(187, 187, 187);
-    transition: color 0.3s ease;
-  }
-
-  .header a,
-  .logo {
-    transition: color 0.4s ease;
-  }
-
-  .nav a.active-nav {
-    display: inline-block;
-    position: relative;
-    font-weight: 700;
-    color: black;
-  }
-
-  .header.scrolled .nav a.active-nav {
-    color: white;
-  }
-
-  
-  .nav a.active-nav::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 4px;
-    background-color: #ff6363;
-    position: absolute;
-    bottom: 1px;
-    /* ✅ padding 안에서 처리 */
-    left: 0;
-    animation: underlineGrow 0.5s ease forwards;
-  }
-
-  @keyframes underlineGrow {
-    from {
-      width: 0;
-    }
-
-    to {
-      width: 100%;
-    }
-  }
 /* YEAR SELECT */
 .year-selector {
   position: absolute;
@@ -262,21 +199,12 @@ header.scrolled .selectYear .year-selector button{
 }
 .year-selector button:hover {
   color: #000;
+}
 
-}
-#menu-toggle:checked + .menu-icon + .nav {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-}
-#menu-toggle:not(:checked) + .menu-icon + .nav {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
 /* MOBILE */
 .menu-icon {
   display: none;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 #menu-toggle {
@@ -293,22 +221,7 @@ header.scrolled .selectYear .year-selector button{
     display: block;
     position: absolute;
     top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-  }
-}
-  @media (max-width: 1060px) {
-  .inner {
-    position: relative;
-  }
-  .logo {
-    position: absolute;
-  }
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 5%;
+    right: 15%;
     transform: translateY(-50%);
   }
   .nav {
@@ -321,7 +234,6 @@ header.scrolled .selectYear .year-selector button{
     z-index: 10;
     align-items: center;
     justify-content: center;
-    color: red !important;
   }
   #menu-toggle:checked + .menu-icon + .nav {
     display: flex;
@@ -333,40 +245,13 @@ header.scrolled .selectYear .year-selector button{
     text-align: center;
   }
   .nav ul li a {
-    color: rgb(114, 114, 114);
-  }
- a.active-nav {
-    color: #eeeeee !important;
+    font-size: 1.2rem;
   }
   #menu-toggle:checked + .menu-icon {
     font-size: 1.8rem;
     line-height: 1;
   }
-}
-@media (max-width: 768px) {
-  body{
-    padding-bottom: 120px !important;
+  #menu-toggle:checked + .menu-icon::before {
+    content: '\u2715'; /* 닫기 X */
   }
-  .year-selector {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    display: flex;
-    gap: 8px;
-  }
-  .nav a.active-nav::after {
-    bottom: 6px;
-  }
-  .nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px !important;
-
-    }
-    .nav ul li a {
-    padding-bottom: 13px;
-}
-    .nav .dropdown{
-      padding: 0px !important;
-    }
 }
