@@ -1,5 +1,5 @@
 ## 🔗 페이지 URL 
-url(운영중): https://kumamid.com  
+공식 url: https://kumamid.com  
 
 ## 🖥 프로젝트 소개 
 전주 비전대 방영디 교수님의 웹 외주  
