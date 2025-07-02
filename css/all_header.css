@@ -221,7 +221,7 @@ body {
     display: block;
     position: absolute;
     top: 50%;
-    right: 15%;
+    right: 5%;
     transform: translateY(-50%);
   }
   .nav {
@@ -234,6 +234,7 @@ body {
     z-index: 10;
     align-items: center;
     justify-content: center;
+    margin-top: 0px;
   }
   #menu-toggle:checked + .menu-icon + .nav {
     display: flex;
@@ -244,14 +245,17 @@ body {
     padding: 20px;
     text-align: center;
   }
+.active-nav{
+    color: #ff6363 !important;
+  }
   .nav ul li a {
     font-size: 1.2rem;
+    color: white;
   }
   #menu-toggle:checked + .menu-icon {
     font-size: 1.8rem;
     line-height: 1;
   }
   #menu-toggle:checked + .menu-icon::before {
-    content: '\u2715'; /* 닫기 X */
   }
 }
