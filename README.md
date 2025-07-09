@@ -1,5 +1,5 @@
 ## 🔗 페이지 URL 
-origin url: kumamid.com  
+origin url: https://kumamid.com  
 
 ## 🖥 프로젝트 소개 
 전주 비전대 방영디 교수님의 웹 외주  
