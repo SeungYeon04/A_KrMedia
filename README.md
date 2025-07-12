@@ -27,12 +27,12 @@ https://kumamid.com
 
 | 항목            | 내용                      |
 |-----------------|---------------------------|
-| 🎮 호스팅 | netlify |
-| 🎮 도메인 | gabia(가비아) |
+| 🌐 호스팅 | netlify |
+| ☁️ 도메인 | gabia(가비아) |
 | 🧑‍💻 언어 | html, css, JavaScript |
 | 🖋 IDE | Visual Studio Code |
 | 📁 버전 관리 | GitHub Desktop |
-| 🧩 DB | FireBace |  
+| 🔥 DB | FireBace |  
   
 ## 🖼 플레이 사진 
   
