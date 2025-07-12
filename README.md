@@ -29,7 +29,7 @@ https://kumamid.com
 |-----------------|---------------------------|
 | 🌐 호스팅 | netlify |
 | ☁️ 도메인 | gabia(가비아) |
-| 👩‍💻 언어 | html, css, JavaScript |
+| 🧑‍💻 언어 | html, css, JavaScript |
 | 🖋 IDE | Visual Studio Code |
 | 📁 버전 관리 | GitHub Desktop |
 | 🔥 DB | FireBace |  
